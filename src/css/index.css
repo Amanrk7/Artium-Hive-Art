@@ -1,0 +1,1863 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+body {
+  font-family: "Alegreya Sans", serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #8d8d8d;
+  background-color: #ebe3d3;
+}
+#root {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-self: center;
+  color: #000000;
+  align-items: center;
+  background-color: #ebe3d3;
+  /* padding: 1rem; */
+}
+/* #appHeaderBack {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%; */
+/* } */
+
+#headerDiv {
+  justify-items: center;
+  /* backdrop-filter: blur(20px); */
+  margin-top: 82px;
+  display: flex;
+  justify-content: center;
+  height: 10em;
+  position: sticky;
+  top: 23px;
+  z-index: 1;
+  transition: 0.9s ease;
+  background-color: #ebe3d3;
+}
+.headerdiv-original-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+#subSlideshowPar {
+  width: 96%;
+}
+#headerDiv2ndDiv {
+  /* width: 100%; */
+  height: 441px;
+  box-shadow: 0 0 11px -3px white;
+  border-radius: 13px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 2px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+#headerDiv2ndDiv {
+  /* background-color: #333; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: -webkit-box;
+  scrollbar-width: none;
+}
+#subNav {
+  justify-content: flex-start;
+  width: 100%;
+  background: none;
+  padding: 13px 0px 17px 51px;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Alegreya Sans", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Alegreya Sans", serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #8d8d8d;
+  background-color: rgb(125 125 125 / 7%);
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  padding: 8px 16px;
+  width: fit-content;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+}
+/* styles.css or fanta.css */
+.nav-item {
+  letter-spacing: "2px";
+  padding: "10px";
+  cursor: pointer;
+}
+
+/* .nav-item.active { */
+/* background-color: #ffffff21; Light grey background for active state */
+/* border-radius: 5px; */
+/* } */
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  /* Slightly darker grey for hover state */
+}
+
+/* .nav-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 27px; 
+  height: 5px;
+  background-color: lightblue;
+  transition: 58px 0.3s ease-in-out;
+} */
+#headerTag {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1px;
+  height: 3em;
+  z-index: 999;
+  position: fixed;
+  border-bottom: 0.9px solid #8d8d8d;
+  margin-bottom: -4px;
+  width: 70%;
+  background-color: #ebe3d3;
+}
+#headerDiv2ndDiv img {
+  padding: 10px;
+}
+#img2 img:hover,
+#img3 img:hover,
+#img4 img:hover,
+#img5 img:hover,
+#img6 img:hover,
+#img7 img:hover {
+  transition: 0.4s ease-in-out;
+  transform: scale(1.2);
+}
+#leftArrow,
+#rightArrow {
+  height: 27em;
+  width: 2%;
+  align-content: center;
+  padding: 21px;
+  border-radius: 12px;
+  transition: 0.9s ease-in-out;
+}
+#leftArrow:hover,
+#rightArrow:hover {
+  border: transparent;
+  background: rgba(175, 175, 175, 0.582);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  width: fit-content;
+}
+
+.tab-container {
+  overflow-x: auto;
+}
+
+.tab-button {
+  border: none;
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.tab-button span {
+  opacity: 0.4;
+  font-weight: 400;
+}
+
+.tab-button:hover {
+  transform: translate(0);
+}
+
+.tab-selected {
+  position: relative;
+}
+
+.tab-selected::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-link);
+  border-radius: 0.5px;
+  animation: widen 250ms ease-in-out forwards;
+}
+
+hr {
+  opacity: 0.4;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: none;
+}
+
+.todo-complete {
+  position: relative;
+}
+
+.todo-complete::after {
+  position: absolute;
+  content: "";
+  z-index: 4;
+  inset: -1.5px;
+  border-radius: inherit;
+  background: var(--background-primary);
+  opacity: 0.6;
+}
+
+.todo-buttons {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+.todo-buttons button {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.todo-buttons button:hover {
+  transform: none;
+  opacity: 0.6;
+}
+
+.todo-buttons button:first-of-type {
+  /* color: #8aff80;
+  background: rgba(138, 255, 128, .1); */
+  color: var(--background-primary);
+  background: var(--color-link);
+}
+
+.todo-buttons button:last-of-type {
+  /* color: #9580ff;
+  background: rgba(149, 128, 255, .1); */
+  color: var(--color-link);
+  background: var(--color-link-transparent);
+}
+
+.todo-item p {
+  font-weight: 500;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-container input {
+  width: 100%;
+  flex: 1;
+  max-width: unset !important;
+}
+
+@keyframes widen {
+  from {
+    width: 20%;
+    height: 1px;
+    opacity: 0.6;
+  }
+
+  to {
+    width: 100%;
+    height: 2.5px;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  .tab-button {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .todo-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+#home,
+#drops,
+#explore,
+#create,
+#login,
+#profile,
+#cart {
+  color: var(--color-primary);
+  background-color: #c2bdbd00;
+  width: fit-content;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 900;
+  padding: 0.25rem 1.25rem;
+  border: 1.5px solid #7f7f7f;
+  border-radius: var(--border-radius-small);
+  box-shadow: 2px 2px 0 0 #000000;
+  transition-duration: 200ms;
+  backdrop-filter: blur(44px);
+  font-family: "Alegreya Sans", serif;
+  font-weight: 900;
+  font-style: normal;
+  margin-right: 8px;
+  color: #000000ef;
+}
+#headerTag:first-child div a:hover,
+#drops:hover,
+#explore:hover,
+#create:hover,
+#login:hover,
+#profile:hover,
+#cart:hover {
+  color: #8d8d8d;
+}
+#logoText {
+  font-family: "Alegreya Sans", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+#main1 h2,
+#main2 h2,
+#main3 h2,
+#main4 h2 {
+  /* color: #272727; */
+  color: #8d8d8d;
+}
+#main1Cards div:hover,
+#main2Cards div:hover,
+#main3Cards div:hover,
+#main4Cards div:hover {
+  transition: 0.3s ease-in-out;
+  transform: translateY(-3px);
+}
+button a {
+  font-family: "Alegreya Sans", serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #000000;
+  text-decoration: none;
+}
+#input-div:hover {
+  border: 1px solid #fff;
+}
+#appHeaderBack {
+  background-size: cover;
+  background-position: center;
+  /* height: 100vh; */
+  width: 70%;
+}
+#sellPage-header,
+#headerDiv div h1 {
+  font-family: "Phonk Contrast DEMO";
+}
+#headerTag:first-child div a {
+  text-decoration: none;
+  font-size: 23px;
+  letter-spacing: 1.5px;
+  color: #000000;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#logoText {
+  font-family: "BOLDE";
+  letter-spacing: 1.3px;
+}
+#nav {
+  display: flex;
+  gap: 53px;
+}
+#nav a {
+  font-family: "Tanseek Modern Pro Arabic Book";
+}
+#img_display_art {
+  width: 50%;
+  height: 38em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: flex-end;
+}
+#img_display_art img {
+  width: 32em;
+  border-radius: 243px;
+  user-select: none;
+  -webkit-user-drag: none;
+  /* pointer-events: none; */
+  filter: invert(0);
+  height: 39em;
+}
+
+#main1-1st-content p {
+  font-family: "Tanseek Modern Pro Arabic Book";
+  font-size: 21px;
+  letter-spacing: 1.3px;
+  text-align: justify;
+  padding-top: 35px;
+}
+#main1-1st-content {
+  background-color: #a99e9e21;
+  padding: 44px;
+  border-radius: 28px;
+  /* box-shadow: 0 0 4px #454242; */
+  box-shadow: 15px 12px black;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 34em;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+#main1 {
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 43px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 11px 0 11px;
+}
+#main1-1st-content > div:nth-child(2) > div {
+  width: 90%;
+}
+#main1-1st-content > div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  /* background: #f5f0ac; */
+  background-color: inherit;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 32px;
+  padding: 8px;
+}
+#main1-1st-content > div:nth-child(2) span {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  background-color: #ffdd6a;
+  color: #000000;
+  border-radius: 100%;
+  padding: 15px;
+  justify-content: center;
+}
+.img-selection {
+  width: 45%;
+}
+.price-input {
+  width: 45%;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 5em;
+  align-items: center;
+  bottom: 0px;
+  margin-bottom: -1px;
+  border-top: 0.9px solid rgb(141, 141, 141);
+  margin-top: -4px;
+  position: fixed;
+  /* background-color: #ebe3d3; */
+  padding: 58px 90px 0 90px;
+}
+#signinDiv {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  background-color: #ebe3d3;
+}
+#signindiv_subdiv_first {
+  background: #b1adad29;
+  padding: 49px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-items: center;
+  align-items: center;
+  height: 60%;
+  justify-content: center;
+  border-radius: 17px;
+  /* box-shadow: 0 0 16px 3px #8f8c8c; */
+  box-shadow: 11px 11px 16px black;
+  justify-content: space-between;
+}
+#loginBtn:hover {
+  background-color: #b1b1b1;
+}
+#btn_upload_file {
+  display: flex;
+  align-items: center;
+  background-color: #ffdd6a;
+  color: #000000;
+  border-radius: 23px;
+  padding: 13px;
+  justify-content: center;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#btn_upload_file:hover,
+#container_buy_btn:hover {
+  transform: translate(1px, 1px);
+  cursor: pointer;
+  background-color: #fff7dd;
+}
+#upload_btn_info_toggle_i:hover {
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: #dbd7d7;
+  cursor: pointer;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#main1-1st-content {
+  box-shadow: 6px 5px 8px black;
+  background-color: #f3f0c92b;
+}
+#main1-1st-content:hover,
+#img_display_art_img:hover {
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  transform: translateY(3%);
+  cursor: pointer;
+}
+#loginPageImg-Ins {
+  background: url("../assets/images/bgg.jpg");
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+#login-page-img-instructions {
+  background: #1c1b1b96;
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  border-radius: 17px;
+}
+.signInDiv-leftside {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.mainLoginFields-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 63%;
+  gap: 28px;
+}
+.logo-login-grand-parent {
+  width: 100%;
+  height: 37%;
+}
+.login-btn-div {
+  width: 100%;
+  margin-top: 75px;
+}
+.upload-img-div-rules ul li {
+  font-family: "Tanseek Modern Pro Arabic Book";
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: rgb(97, 94, 94);
+}
+.upload-img-div-rules-header h3 {
+  font-family: "Phonk Contrast DEMO";
+  font-size: 17px;
+  color: rgb(97, 94, 94);
+}
+.header-nav-mobile-ori {
+  justify-content: flex-end;
+  padding-left: 15px;
+  width: 30%;
+}
+.header-nav-mobile-hidden {
+  display: none;
+}
+#sellPage-header-hidden-mobile {
+  display: none;
+}
+.img-upload-parent-box {
+  width: 50%;
+  height: 40%;
+  align-content: center;
+  justify-items: center;
+  border-radius: 33px;
+  box-shadow: 6px 5px 8px black;
+}
+.img-upload-div-child1 {
+  width: 100%;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 37px;
+}
+
+.imgUpload-section {
+  display: flex;
+  gap: 2px;
+  border: 0.9px solid;
+  border-radius: 33px;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#btn_upload_file-parent {
+  width: 10%;
+}
+.footer-child1 {
+  display: flex;
+  font-family: "BOLDE";
+  letter-spacing: 1.3px;
+  font-size: 18px;
+}
+
+.footer-child2 {
+  display: flex;
+}
+.footer-child2-1 {
+  font-family: "BOLDE";
+  letter-spacing: 1.3px;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+.footer-child2-2 {
+  font-family: "BOLDE";
+  letter-spacing: 1.3px;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+#logo-img {
+  width: 4.6em;
+  margin-top: 6px;
+}
+.img-art-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.img-art-desc h3 {
+  font-size: 40px;
+  font-family: "Tanseek Modern Pro Arabic Book";
+  letter-spacing: 2px;
+}
+.img-art-desc > div:nth-child(2) {
+  font-family: "Tanseek Modern Pro Arabic Book";
+  font-size: 24px;
+}
+#header-div-h1-1 {
+  font-size: 41px;
+}
+#header-div-h1-2 {
+  font-size: 48px;
+  margin-top: 7px;
+}
+#main1-parent {
+  padding: 24px 18px 0px 42px;
+}
+.logo-div {
+  margin-right: 33px;
+  width: 35%;
+}
+.header-right {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+.headerDiv-hidden-mobile-child {
+  display: none;
+}
+#signindiv_subdiv_first {
+  background: none;
+  padding: 49px;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  justify-items: center;
+  align-items: center;
+  height: 60%;
+  justify-content: center;
+  border-radius: 17px;
+  /* box-shadow: 0 0 16px 3px #8f8c8c; */
+  box-shadow: none;
+  justify-content: space-between;
+}
+.mainLoginFields-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 63%;
+  gap: 36px;
+}
+.login-btn-div {
+  width: 38%;
+  margin-top: 28px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5em;
+  align-items: center;
+  bottom: 0px;
+  margin-bottom: -1px;
+  border-top: 0.9px solid rgb(141, 141, 141);
+  margin-top: -4px;
+  position: fixed;
+  /* background-color: #ebe3d3; */
+  padding: 0px 90px 0 90px;
+  align-items: center;
+  backdrop-filter: blur(20px);
+}
+.login-btn {
+  width: 93%;
+  padding: 14px;
+  font-family: circular;
+  background-color: rgb(203 153 12);
+}
+#signindiv_subdiv_first {
+  background: none;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+  justify-items: center;
+  align-items: center;
+  height: 44%;
+  justify-content: center;
+  border-radius: 17px;
+  /* box-shadow: 0 0 16px 3px #8f8c8c; */
+  box-shadow: none;
+  justify-content: space-between;
+}
+
+#signinDiv-h3 {
+  font-family: "Phonk Contrast DEMO";
+  /* height: -webkit-fill-available; */
+  width: max-content;
+  font-size: 4.5rem;
+  line-height: 2rem;
+}
+#login-page-img-instructions {
+  width: 100%;
+  height: 100%;
+
+  /* background: #1c1b1b96; */
+  backdrop-filter: blur(10px);
+  color: white;
+
+  padding: 53px;
+  display: flex;
+  flex-direction: column;
+  gap: 66px;
+  /* border-radius: 17px; */
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: transparent;
+}
+#logo-img-signin {
+  width: 100%;
+  margin-bottom: 156px;
+}
+#logo-login-grand-parent div {
+  font-family: "Phonk Contrast DEMO";
+}
+.login-btn-div {
+  width: 42%;
+  margin-top: 28px;
+}
+.custom-file-input {
+  display: none;
+}
+
+.custom-file-label {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: 900;
+  font-family: circular;
+  letter-spacing: 0.3px;
+}
+
+.custom-file-label:hover {
+  background-color: #0056b3;
+}
+
+.file-name {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #615e5e;
+}
+.instagram-icon {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* font-size: 2rem; Adjust size as needed */
+}
+#login-mobile-signin-hidden {
+  display: none;
+}
+#login-btn {
+  width: 100%;
+  padding: 18px;
+  font-family: "BOLDE";
+  background-color: rgb(125 121 121);
+}
+/* ---------media-queries---------------------------------------------------- */
+
+/* ------------------1 for phones, less than or =425px---------------- */
+@media only screen and (max-width: 425px) {
+  /* ---login page--- */
+  #signinDiv {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 27px;
+    margin-bottom: 36px;
+  }
+  .footer {
+    width: 100%;
+  }
+  #signindiv_subdiv_first {
+    width: 90%;
+    padding: 9px;
+    height: fit-content;
+  }
+  .signInDiv-leftside {
+    width: 100%;
+    margin-top: 91px;
+  }
+  #loginPageImg-Ins {
+    background: none;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  #login-page-img-instructions {
+    padding: 18px;
+    width: 90%;
+  }
+  .mainLoginFields-div {
+    margin-top: 70px;
+  }
+  .login-btn-div {
+    margin-top: 31px;
+  }
+  /* ---login -end----- */
+
+  /* ---sell-page-and fix-elements------ */
+  #headerTag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-nav-mobile-ori {
+    display: none;
+  }
+  .header-nav-mobile-hidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: inherit;
+    border-bottom: inherit;
+  }
+  #profile {
+    font-size: 15px;
+    padding: 6px;
+    height: 26px;
+  }
+  #cart {
+    font-size: 15px;
+    padding: 6px;
+    height: 26px;
+  }
+  #logoText {
+    margin-left: 8px;
+  }
+  nav {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2px 8px 2px 8px;
+    background-color: inherit;
+  }
+  #appHeaderBack {
+    width: 100%;
+  }
+  #sellPage-header {
+    display: none;
+  }
+  #sellPage-header-hidden-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 0 8px 0 8px;
+    width: 100%;
+  }
+  #sellPage-header-hidden-mobile h1 {
+    font-family: "Phonk Contrast DEMO";
+    width: 100%;
+  }
+
+  .img-upload-parent-box {
+    width: 96%;
+    height: fit-content;
+    align-content: center;
+    justify-items: center;
+    border-radius: 33px;
+    box-shadow: black 0px 10px 10px;
+  }
+  .img-upload-div-child1 {
+    width: 100%;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 8px;
+  }
+  .imgUpload-section {
+    display: flex;
+    gap: 2px;
+    border: 0.9px solid;
+    border-radius: 33px;
+    width: 96%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin-top: 12px;
+    gap: 0;
+    margin-bottom: 8px;
+  }
+  #btn_upload_file-parent {
+    width: 13%;
+  }
+  #btn_upload_file-parent span {
+    border-radius: 100%;
+  }
+  .img-selection {
+    width: 45%;
+  }
+  .price-input {
+    width: 42%;
+  }
+  .footer {
+    width: 100%;
+    padding: 0 8px 0 8px;
+  }
+
+  .footer-child1 {
+    font-size: 15px;
+  }
+
+  .footer-child2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer-child2-1 {
+    font-size: 15px;
+  }
+  .footer-child2-2 {
+    font-size: 15px;
+    margin-top: -2px;
+  }
+  .upload-img-div-rules-header h3 {
+    font-size: 15px;
+  }
+  .upload-img-div-rules ul li {
+    font-size: 17px;
+  }
+  /* ---sell-page-and fix-elements--end------ */
+
+  /* ---main-buy-page-start------ */
+  #logo-img {
+    margin: 5px 0 -4px 4px;
+    width: 63px;
+  }
+  #headerDiv {
+    position: initial;
+    height: 13em;
+    align-items: baseline;
+    margin: 125px 8px 24px 8px;
+
+    gap: 1px;
+    text-align: -webkit-left;
+  }
+  #main1-parent {
+    padding: 0;
+  }
+  #header-div-h1-1 {
+    font-size: 29px;
+  }
+  #header-div-h1-2 {
+    font-size: 29px;
+  }
+
+  #main1 {
+    flex-direction: column-reverse;
+  }
+  #img_display_art {
+    width: 88%;
+    height: 20%;
+    pointer-events: none;
+    justify-content: center;
+  }
+  #main1-1st-content {
+    width: 88%;
+    height: 20%;
+    padding: 17px;
+  }
+  #main1-1st-content > div:nth-child(2) > div {
+    width: 83%;
+  }
+  #main1-1st-content > div:nth-child(2) span {
+    width: 17%;
+  }
+  #main1-1st-content:hover {
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    transform: translateY(0);
+    cursor: pointer;
+  }
+  .img-art-desc h3 {
+    font-size: 35px;
+  }
+
+  .img-art-desc > div:nth-child(2) {
+    font-size: 18px;
+  }
+  #main1-1st-content p {
+    font-size: 17px;
+    margin-top: 0;
+    padding-top: 8px;
+  }
+  .img-art-desc {
+    gap: 3px;
+  }
+  #img_display_art img {
+    height: 30em;
+    width: 20em;
+  }
+  #main1 {
+    gap: 6px;
+  }
+  .headerdiv-original-child {
+    display: none;
+  }
+  .headerDiv-hidden-mobile-child {
+    font-family: "Phonk Contrast DEMO";
+    display: flex;
+    flex-direction: column;
+  }
+  .footer {
+    position: relative;
+    height: 10em;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .footer-child1 {
+    font-size: 11px;
+  }
+  .footer-child2-2 {
+    font-size: 11px;
+    margin-top: -2px;
+  }
+  .footer-child2 {
+    flex-direction: row;
+    align-items: baseline;
+    text-align: center;
+  }
+  .footer-child2-1 {
+    font-size: 11px;
+  }
+  .img-art-desc h3 {
+    font-size: 22px;
+  }
+  .img-art-desc > div:nth-child(2) {
+    font-size: 16px;
+    padding: 0;
+    height: 45px;
+    margin-top: 8px;
+  }
+  #main1-1st-content p {
+    font-size: 15px;
+    margin-top: 0;
+    padding-top: 8px;
+  }
+  #main1-1st-content > div:nth-child(2) span {
+    width: 14%;
+    font-size: 16px;
+    padding: 11px;
+  }
+  #main1-1st-content > div:nth-child(2) > div {
+    width: 86%;
+    font-size: 10px;
+  }
+  #main1-1st-content > div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    /* background: #f5f0ac; */
+    background-color: inherit;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 32px;
+    padding: 1px;
+    margin-top: 8px;
+  }
+  .headerDiv-hidden-mobile-child {
+    gap: 10px;
+  }
+  #header-div-h1-2 {
+    margin-top: 0px;
+  }
+  #headerTag:first-child div a {
+    font-size: 18px;
+  }
+  #header-div-h1-1 {
+    font-size: 30px;
+  }
+  #header-div-h1-2 {
+    font-size: 33px;
+  }
+  #header-div-h1-3 {
+    font-size: 36px;
+  }
+  #signin-mobile-ori,
+  .login-nav,
+  #signinDiv {
+    display: none;
+  }
+  #login-mobile-signin-hidden {
+    display: initial;
+    width: 100%;
+  }
+  .login-nav-hidden {
+    position: fixed;
+    width: 100%;
+    justify-items: end;
+    padding: 58px 36px 0 79px;
+    z-index: 2;
+  }
+  .login-nav-hidden-div {
+    font-family: BOLDE;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 12px;
+    background-color: transparent;
+  }
+  body {
+    background: transparent;
+  }
+  .footer {
+    border-top: 0.2px solid white;
+    position: fixed;
+    height: 10em;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    flex-direction: column;
+    gap: 3px;
+    color: #ffffff;
+  }
+  #signinDiv-hidden {
+    background: url(/src/assets/images/bgg.jpg);
+    height: 100vh;
+    color: white;
+    /* position: fixed; */
+  }
+  .signInDiv-leftside-hidden {
+    backdrop-filter: blur(9px);
+    height: 100%;
+    margin-bottom: 0px;
+    background-color: #ffffff00;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+  }
+  .mainLoginFields-div-hidden {
+    width: 100%;
+    color: white;
+  }
+  #signindiv_subdiv_first-hidden {
+    width: 80%;
+  }
+  .mainLoginFields-div {
+    margin-top: 33px;
+  }
+
+  .login-nav-hidden {
+    position: fixed;
+    width: 100%;
+    justify-items: end;
+    padding: 58px 36px 0 45px;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  #logo-signin {
+    width: 47px;
+  }
+  .footer {
+    position: relative;
+    color: black;
+    border-top: 0.9px solid #8d8d8d;
+  }
+  /* #headerDiv {
+    margin: 184px 8px 24px 8px;
+  } */
+  /* ---main-buy-page---end------ */
+}
+
+/* ------------------1 for phones, > 425px and < 768px---------------- */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  #signinDiv {
+    width: 100%;
+    height: 100vh;
+    gap: 27px;
+  }
+  .footer {
+    width: 100%;
+  }
+  #signindiv_subdiv_first {
+    width: 100%;
+    padding: 14px;
+    height: 47%;
+    margin-left: 20px;
+  }
+  /* .signInDiv-leftside {
+    width: 80%;
+    margin-top: 100px;
+  } */
+  /* #loginPageImg-Ins {
+    height: fit-content;
+    width: 100%;
+    
+  } */
+  #login-page-img-instructions {
+    padding: 16px;
+    width: 95%;
+    height: 49%;
+    gap: 14px;
+  }
+  .logo-login-grand-parent {
+    height: 20%;
+  }
+  .mainLoginFields-div {
+    justify-content: end;
+    height: -webkit-fill-available;
+  }
+
+  .login-btn-div {
+    margin-top: 34px;
+  }
+  /* ------main-page-------start--------- */
+  .logo-div {
+    margin-right: 33px;
+    width: 20%;
+  }
+  .header-nav-mobile-ori {
+    width: 80%;
+    justify-items: center;
+  }
+  .header-right {
+    width: 20%;
+    justify-content: flex-end;
+  }
+  #headerTag {
+    width: 100%;
+  }
+  #appHeaderBack {
+    width: 98%;
+    padding-bottom: 25px;
+    justify-items: center;
+  }
+  #main1-1st-content {
+    height: -webkit-fill-available;
+    padding: 28px;
+    box-shadow: -6px 9px 10px black;
+  }
+  #img_display_art {
+    height: 100%;
+    justify-content: center;
+  }
+  #img_display_art img {
+    height: 23em;
+    width: 17em;
+  }
+  #main1-parent {
+    padding: 0;
+  }
+  #headerDiv {
+    position: initial;
+    align-items: baseline;
+    margin: 128px 0 29px 0;
+    width: 100%;
+    margin-left: 8px;
+  }
+  #headerDiv > div:first-child {
+    align-items: baseline;
+    display: none;
+  }
+  .headerDiv-hidden-mobile-child {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+  }
+  .footer {
+    width: 100%;
+    padding: 0 8px 0 8px;
+  }
+  #main1-1st-content > div:nth-child(2) > div {
+    border-image-width: 80%;
+  }
+  #main1-1st-content > div:nth-child(2) span {
+    width: 20%;
+    padding: 13px;
+  }
+  #main1-1st-content > div:nth-child(2) {
+    padding: 0;
+    margin-top: 6px;
+    padding: 1px;
+  }
+  .img-art-desc {
+    gap: 1px;
+  }
+  .img-art-desc > div:nth-child(2) {
+    font-size: 18px;
+  }
+  .img-art-desc h3 {
+    font-size: 32px;
+  }
+  #main1-1st-content p {
+    font-size: 17px;
+    padding-top: 14px;
+  }
+  .img-upload-parent-box {
+    width: 68%;
+    height: 44%;
+  }
+  .imgUpload-section {
+    gap: 0;
+    padding: 6px;
+    margin-top: 10px;
+  }
+  .upload-img-div-rules ul li {
+    font-size: 18px;
+  }
+  .price-input {
+    width: 43%;
+  }
+  #btn_upload_file-parent {
+    width: 13%;
+  }
+  #signinDiv-h3 {
+    font-family: "Phonk Contrast DEMO";
+    /* height: -webkit-fill-available; */
+    width: -webkit-fill-available;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+  .signInDiv-leftside {
+    width: 43%;
+  }
+  #loginPageImg-Ins {
+    width: 57%;
+  }
+  #login-page-img-instructions {
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+    gap: 14px;
+    justify-content: center;
+  }
+  #logo-img-signin {
+    display: none;
+  }
+  #logo-signin {
+    width: 71px;
+  }
+  .login-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: flex-start;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer-child1 {
+    display: flex;
+    font-family: "BOLDE";
+    letter-spacing: 1.3px;
+    font-size: 12px;
+  }
+  .footer-child2-1 {
+    font-family: "BOLDE";
+    letter-spacing: 1.3px;
+    font-size: 12px;
+    text-transform: lowercase;
+  }
+  .footer-child2-2 {
+    font-family: "BOLDE";
+    letter-spacing: 1.3px;
+    font-size: 12px;
+    text-transform: lowercase;
+  }
+  #signindiv_subdiv_first {
+    width: 100%;
+    padding: 14px;
+    height: 43%;
+    /* margin-left: 20px; */
+  }
+  .login-btn-div {
+    margin-top: 34px;
+  }
+  #loginBtn {
+    width: 100%;
+    padding: 12px;
+    font-family: "BOLDE";
+    background-color: rgb(18 17 17);
+  }
+  #signindiv_subdiv_first {
+    margin-left: 0px;
+  }
+  /* ------main-page-------end--------- */
+}
+
+/* ------------------1 for phones, > 769px and < 1024px---------------- */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* ---login-page-start--------- */
+  .logo-login-grand-parent {
+    height: 20%;
+  }
+  .footer {
+    width: 100%;
+  }
+  .mainLoginFields-div {
+    height: 80%;
+    justify-content: end;
+    gap: 18px;
+    height: fit-content;
+  }
+  .login-btn-div {
+    margin-top: 51px;
+  }
+  #signindiv_subdiv_first {
+    height: 53%;
+    padding: 16px;
+  }
+  /* --login-page-end------------ */
+
+  /* -----main-page-start--------- */
+  #headerTag {
+    width: 100%;
+    padding: 0px 4px 0 8px;
+  }
+  .logo-div {
+    width: 20%;
+  }
+  .header-nav-mobile-ori {
+    width: 80%;
+    justify-items: center;
+  }
+  .header-right {
+    width: 20;
+  }
+  .footer {
+    width: 100%;
+    padding: 0 8px 0 8px;
+    z-index: 3;
+  }
+  #appHeaderBack {
+    width: 100%;
+  }
+  .headerdiv-original-child {
+    display: none;
+  }
+  .headerDiv-hidden-mobile-child {
+    display: grid;
+    justify-items: center;
+  }
+  #header-div-h1-2 {
+    font-size: 51px;
+  }
+  #header-div-h1-1 {
+    font-size: 45px;
+  }
+  #img_display_art {
+    justify-content: center;
+  }
+  #img_display_art img {
+    width: 22em;
+    height: 30em;
+  }
+  .img-art-desc {
+    gap: 0;
+  }
+  .img-art-desc > div:nth-child(2) {
+    font-size: 22px;
+  }
+  #main1-1st-content p {
+    font-size: 21px;
+    padding-top: 25px;
+  }
+  .img-art-desc h3 {
+    font-size: 37px;
+  }
+  #main1-1st-content > div:nth-child(2) > div {
+    width: 85%;
+  }
+  #main1-1st-content > div:nth-child(2) span {
+    width: 15%;
+  }
+  #main1 {
+    position: sticky;
+    top: 40px;
+    z-index: 2;
+    background: #ebe3d3;
+    border-top: 0.2px solid;
+  }
+  #main1-parent {
+    padding: 24px 8px 0px 8px;
+  }
+  #main1-parent > div:last-child {
+    margin-bottom: 208px;
+    padding-top: 33px;
+  }
+  .imgUpload-section {
+    padding: 5px;
+    margin-top: 24px;
+  }
+  #signindiv_subdiv_first {
+    width: 87%;
+    padding: 15px;
+  }
+  #login-page-img-instructions {
+    height: fit-content;
+    width: 90%;
+    padding: 32px;
+  }
+  .login-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: flex-start;
+  }
+  #signindiv_subdiv_first {
+    width: 87%;
+    padding: 15px;
+    z-index: 5;
+    backdrop-filter: blur(2px);
+  }
+  #loginBtn {
+    width: 100%;
+    padding: 14px;
+    background-color: #000000;
+  }
+  .login-btn-div {
+    margin-top: 45px;
+    font-family: "BOLDE";
+    width: 33%;
+  }
+  #login-page-img-instructions {
+    width: 100%;
+    padding: 32px;
+    height: 100%;
+    justify-content: center;
+  }
+  .footer {
+    width: 100%;
+    /* padding: 7px; */
+    z-index: 3;
+    flex-direction: column;
+  }
+  #logo-signin {
+    width: 88px;
+  }
+  .footer-child1 {
+    font-size: 12px;
+  }
+  .footer-child2-2 {
+    font-size: 12px;
+  }
+  .footer-child2 {
+    display: flex;
+    gap: 5px;
+  }
+  .footer-child2-1 {
+    font-size: 9px;
+  }
+  /*------main -page- end-------------- */
+}
+
+/* ------------------1 for phones, > 1024px and < 2560---------------- */
+@media only screen and (min-width: 1025px) and (max-width: 2560px) {
+  /* ------login-page-start------------- */
+  .footer {
+    width: 100%;
+  }
+  #login-page-img-instructions {
+    background: #1c1b1b96;
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 63%;
+    height: 60%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    justify-content: center;
+    border-radius: 17px;
+  }
+  #signindiv_subdiv_first {
+    padding: 26px;
+  }
+  .mainLoginFields-div {
+    height: fit-content;
+    gap: 31px;
+  }
+  /* ------login-page-end--------------- */
+  #headerTag {
+    width: 100%;
+    padding: 0 21px 0 21px;
+  }
+  .footer {
+    width: 100%;
+    padding: 0 21px 0 21px;
+  }
+  .logo-div {
+    width: 20%;
+  }
+  .header-right {
+    width: 20%;
+  }
+  .header-nav-mobile-ori {
+    width: 80%;
+    justify-items: center;
+  }
+  #appHeaderBack {
+    width: 90%;
+  }
+  #headerDiv {
+    top: 34px;
+  }
+  #img_display_art {
+    justify-content: center;
+  }
+  #img_display_art img {
+    width: 30em;
+    height: 35em;
+  }
+  #main1 {
+    align-items: center;
+    gap: 36px;
+    margin-bottom: 43px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 11px 0 11px;
+    position: sticky;
+    top: 200px;
+    border-top: 0.9px solid;
+    transition: 0.7s ease;
+    background: #ebe3d3;
+    padding: 15px;
+  }
+  #main1-parent {
+    padding: 24px 18px 0px 42px;
+  }
+  .login-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    position: fixed;
+    /* color: white; */
+    width: 100%;
+    align-items: flex-start;
+    font-size: 16px;
+    z-index: 1;
+  }
+  #logo-signin {
+    width: 90px;
+  }
+  #loginPageImg-Ins {
+    background: url(/src/assets/images/bgg.jpg);
+    align-items: center;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .signInDiv-leftside {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #login-page-img-instructions {
+    background: #1c1b1b96;
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 63%;
+    height: 60%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    justify-content: center;
+    width: 100%;
+    border-radius: 17px;
+    height: 100%;
+    background: transparent;
+  }
+  #signinDiv-h3 {
+    font-family: "Phonk Contrast DEMO";
+    /* height: -webkit-fill-available; */
+    width: 13em;
+    font-size: 4.9rem;
+    line-height: 6rem;
+  }
+  #signindiv_subdiv_first {
+    padding: 26px;
+    width: 65%;
+  }
+  #loginBtn {
+    width: 100%;
+    height: 3em;
+    background-color: black;
+    font-family: "BOLDE";
+  }
+  .login-btn-div {
+    width: 48%;
+    margin-top: 28px;
+  }
+  .footer {
+    width: 100%;
+    padding: 0 21px 11px 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 8em;
+    color: #161616;
+    position: relative;
+  }
+  #signin-mobile-ori{
+    width: 100%;
+  }
+  #signinDiv {
+    
+    width: 100%;
+  }
+}
+
+/* .login-nav {
+  position: fixed;
+  width: 100%;
+  justify-items: end;
+  padding: 58px 90px 0 90px;
+} */
