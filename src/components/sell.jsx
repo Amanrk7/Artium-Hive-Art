@@ -9,7 +9,7 @@ import {
   storage,
 } from "../firebase/firebase";
 import { v4 as uuidv4 } from "uuid";
-import { FileUpload } from "./FileUpload";
+import { FileUpload } from "./fileUpload";
 import { useRef, useState } from "react";
 
 export const SellPage = () => {
