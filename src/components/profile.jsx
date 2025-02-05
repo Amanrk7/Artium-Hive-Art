@@ -1,46 +1,94 @@
-// src/components/Profile.jsx
-import React, { useEffect, useState } from "react";
-import { auth, db, doc, getDoc } from "../firebase/firebase";
+import { useEffect, useState } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../firebase/firebase"; // Ensure you import `db`
+// import { auth } from "../firebase/firebase"; // Ensure you import `auth`
+// import { signOut } from "firebase/auth"; // Import signOut for logout functionality
 
 const Profile = ({ user }) => {
-  const [userData, setUserData] = useState(null);
-
+  const [history, setHistory] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const fetchUserData = async () => {
-      const userRef = doc(db, "users", user.uid);
-      const userSnap = await getDoc(userRef);
-      if (userSnap.exists()) {
-        setUserData(userSnap.data());
-      }
+    const fetchHistory = async () => {
+      const q = query(
+        collection(db, "submissions"),
+        where("userId", "==", user.uid)
+      );
+      const querySnapshot = await getDocs(q);
+      const historyData = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setHistory(historyData);
+      setLoading(false); // Set loading to false after data is fetched
     };
 
-    if (user) {
-      fetchUserData();
-    }
-  }, [user]);
-  const handleLogout = () => {
-    auth.signOut();
-  };
+    fetchHistory();
+  }, [user.uid]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "antiquewhite",
-        padding: "73px",
-        alignItems: "center",
-        gap: "34px",
-        height: "80vh",
-      }}
-    >
-      <div style={{ width: "100%" }}>
-        <h1>Welcome Back</h1>
+    <>
+      <div id="profile-page-child1">
+        <h1>Your Uploads</h1>
+        <ul>
+          {history.map((item, index) => (
+            <li key={index}>
+              {/* Display the image instead of the URL */}
+              <div style={{ marginBottom: "10px" }}>
+                <img
+                  src={item.fileUrl}
+                  alt={`Uploaded by ${user.email}`}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    borderRadius: "8px",
+                  }}
+                  onError={(e) => {
+                    e.target.onerror = null; // Prevent infinite loop
+                    e.target.src = "path/to/fallback-image.jpg"; // Fallback image
+                  }}
+                />
+              </div>
+              <p>SP: {item.price}</p>
+              <p>
+                Status:{" "}
+                {item.status === "sold" ? (
+                  <span
+                    style={{
+                      color: "green",
+                      fontFamily: "Phonk Contrast DEMO",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {item.status}
+                  </span>
+                ) : (
+                  <span
+                    style={{
+                      color: "#dea600",
+                      fontFamily: "Phonk Contrast DEMO",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {item.status}
+                  </span>
+                )}
+              </p>
+              <p>Submitted on: {item.createdAt.toDate().toDateString()}</p>
+              {/* {item.status === "under_review" && (
+                <button onClick={() => handleMarkAsSold(item)}>
+                  Mark as Sold
+                </button>
+              )} */}
+            </li>
+          ))}
+        </ul>
       </div>
-      <div style={{ width: "100%" }}>User: {user.email}</div>
-      <div style={{ width: "100%" }}>
-        <button onClick={handleLogout}>Logout</button>
-      </div>
-    </div>
+    </>
   );
 };
+
 export default Profile;

@@ -1,28 +1,69 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { useSelector, useDispatch } from "react-redux";
 import artiumhiveLogo from "../assets/images/artiumhiveLogo.png";
+import { LogOut } from "./logOut";
 // import { toggleStatusTab } from "../stores/cart"; // Import the toggleStatusTab action
 // import Cart from "./cart"; // Import the Cart component
-export const PageNavigation = () => {
+export const PageNavigation = ({
+  onProfileClick,
+  onSellClick,
+  onLoginClick,
+}) => {
+  const handleSellClick = () => {
+    if (!user) {
+      setShowSignInForm(true); // Show sign-in form if not authenticated
+    } else {
+      // Redirect to sell page or perform action
+    }
+  };
+
+  const handleProfileClick = () => {
+    if (!user) {
+      setShowSignInForm(true); // Show sign-in form if not authenticated
+    } else {
+      // Redirect to profile page or perform action
+    }
+  };
   const handleToggleCart = () => {
     console.log("Cart button clicked!"); // Log the click event
     dispatch(toggleStatusTab());
   };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null); // Ref to track the menu container
 
+  // Function to open/close the menu
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Function to close the menu
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Effect to detect clicks outside the menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        handleCloseMenu();
+      }
+    };
+
+    // Add event listener when the menu is open
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    // Cleanup the event listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
   return (
     <>
       <header id="headerTag">
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-
-            alignItems: "center",
-            // margin: "0 3em",
-          }}
-        >
+        <div id="headerTag_1stdiv">
           <div className="logo-div">
             <Link to="/" className="text-xl font-semibold">
               {/* <h1 id="logoText" className="text-gradient cursor-pointer">  */}
@@ -39,7 +80,11 @@ export const PageNavigation = () => {
               </Link>
               {/* </button> */}
               {/* <button id="explore"> */}
-              <Link to="sell" className="text-xl font-semibold">
+              <Link
+                to="sell"
+                className="text-xl font-semibold"
+                onClick={onSellClick}
+              >
                 Sell
               </Link>
               {/* </button> */}
@@ -58,7 +103,14 @@ export const PageNavigation = () => {
 
           <div className="header-right">
             {/* <button id="login">Login</button> */}
-            <Link to="profile" className="text-xl font-semibold">
+            {/* <Link to={logOut}> */}
+            <LogOut onClick={onLoginClick} />
+            {/* </Link> */}
+            <Link
+              to="profile"
+              className="text-xl font-semibold"
+              onClick={onProfileClick}
+            >
               <button id="profile">
                 <i className="fa-regular fa-user"></i>
               </button>
@@ -67,6 +119,46 @@ export const PageNavigation = () => {
             <button id="cart" onClick={handleToggleCart}>
               <i className="fa-solid fa-cart-shopping"></i>
             </button>
+          </div>
+
+          <div className="header-right-hidden-mobile" ref={menuRef}>
+            {/* Hamburger Icon (Visible when menu is closed) */}
+            {!isMenuOpen && (
+              <button id="cart" onClick={handleToggleMenu}>
+                <i
+                  className="fa-solid fa-bars"
+                  style={{ color: "#000000" }}
+                ></i>
+              </button>
+            )}
+
+            {/* Menu Content (Visible when menu is open) */}
+            {isMenuOpen && (
+              <>
+                <LogOut onClick={onLoginClick} />
+                <Link
+                  to="profile"
+                  className="text-xl font-semibold"
+                  onClick={onProfileClick}
+                >
+                  <button id="profile">
+                    <i className="fa-regular fa-user"></i>
+                  </button>
+                </Link>
+
+                <button id="cart" onClick={handleToggleCart}>
+                  <i className="fa-solid fa-cart-shopping"></i>
+                </button>
+
+                {/* Close Button (Cross Icon) */}
+                <button id="cart" onClick={handleCloseMenu}>
+                  <i
+                    className="fa-regular fa-circle-xmark"
+                    style={{ color: "#000000" }}
+                  ></i>
+                </button>
+              </>
+            )}
           </div>
         </div>
 
@@ -78,7 +170,11 @@ export const PageNavigation = () => {
             </Link>
             {/* </button> */}
             {/* <button id="explore"> */}
-            <Link to="sell" className="text-xl font-semibold">
+            <Link
+              to="sell"
+              className="text-xl font-semibold"
+              onClick={onSellClick}
+            >
               Sell
             </Link>
             {/* </button> */}

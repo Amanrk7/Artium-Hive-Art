@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { getDownloadURL } from "firebase/storage";
+import { storage, ref, uploadBytes } from "../firebase/firebase";
+import emailjs from "emailjs-com";
+import { auth, db, setDoc, doc } from "../firebase/firebase";
+import LazyLoad from "react-lazyload";
 
 const ArtCard = ({ data }) => {
   const { name, price, image, slug, description } = data;
+  const [user, setUser] = useState(null); // Add user state
+  const [priceErr, setPriceErr] = useState(false);
+  const [textInput, setTextInput] = useState("");
+  const [isHovered, setIsHovered] = useState(false);
 
   React.useEffect(() => {
     const handleContextMenu = (e) => {
@@ -13,10 +22,69 @@ const ArtCard = ({ data }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user); // Set the authenticated user
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleSentArt = async () => {
+    console.log(`sending.... email to ${user.email}`);
+
+    // if (user?.email) {
+    //   setLoading(true);
+    //   try {
+    //     const uploadPromises = files.map(async (file) => {
+    //       const storageRef = ref(storage, `uploads/${user.email}/${file.name}`);
+    //       const snapshot = await uploadBytes(storageRef, file);
+    //       const downloadURL = await getDownloadURL(snapshot.ref);
+
+    //       // Use a unique document ID
+    //       await setDoc(doc(db, "uploads", `${user.uid}_${file.name}`), {
+    //         userId: user.uid,
+    //         fileName: file.name,
+    //         fileUrl: downloadURL,
+    //         uploadedAt: new Date(),
+    //         textInput: textInput,
+    //       });
+
+    //     });
+    //     sendArtToEmail(downloadURL);
+    //     await Promise.all(uploadPromises);
+    //     setLoading(false);
+    //     setFileUploaded(true);
+    //   } catch (error) {
+    //     setLoading(false);
+    //     setError("Upload failed: " + error.message);
+    //     console.error("Error uploading file: ", error);
+    //   }
+    // }
+  };
+  // const sendArtToEmail = (downloadURL) => {
+  //   const templateParams = {
+  //     to_email: `${user.email}`,
+  //     attachment: downloadURL,
+  //   };
+  //   emailjs
+  //     .send(
+  //       "service_40ncdqw",
+  //       "template_u03b01e",
+  //       templateParams,
+  //       "Qx6jX1aoOdXJXq4BM"
+  //     )
+  //     .then((response) => {
+  //       console.log("Email sent successfully:", response.status, response.text);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error sending email:", error);
+  //     });
+  // };
+
   return (
     <>
       {/* ---------img-art-description------- */}
-      <div id="main1-1st-content">
+      <div id="main1-1st-content" style={{ display: "none" }}>
         <div className="img-art-desc">
           <div>
             <h3>Title: {name}</h3>
@@ -31,7 +99,16 @@ const ArtCard = ({ data }) => {
           <div>
             <input
               type="number"
-              placeholder="min-value-10!!"
+              value={textInput}
+              onChange={(e) => {
+                const value = e.target.value;
+                const isNumber = !isNaN(value) && value !== "";
+                const isValidPrice = isNumber && parseFloat(value) >= 10;
+
+                setPriceErr(!isValidPrice);
+                setTextInput(value);
+              }}
+              placeholder="price must be more than 10!"
               style={{
                 width: "100%",
                 border: "none",
@@ -43,30 +120,81 @@ const ArtCard = ({ data }) => {
               }}
             />
           </div>
-          <span id="container_buy_btn" className="material-symbols-outlined">
+          <span
+            onClick={handleSentArt}
+            id="container_buy_btn"
+            className="material-symbols-outlined"
+          >
             arrow_outward
           </span>
         </div>
+        <span>
+          {priceErr && (
+            <p
+              style={{
+                color: " #df4d4d",
+                fontFamily: "circular",
+                transition: ".9s ease-in-out",
+                fontSize: "11px",
+                transform: "translateY(-1px)",
+              }}
+            >
+              Price should be 10 or more!
+            </p>
+          )}
+        </span>
       </div>
 
       {/* ---------img-art------- */}
-      <div id="img_display_art">
-        <img
-          id="img_display_art_img"
-          src={image}
-          alt="art1"
-          style={{
-            WebkitTouchCallout: "none",
-            WebkitUserSelect: "none",
-            KhtmlUserSelect: "none",
-            MozUserSelect: "none",
-            MsUserSelect: "none",
-            userSelect: "none",
-            WebkitUserDrag: "none",
-            userDrag: "none",
-            // pointerEvents: "none",
-          }}
-        />
+      <LazyLoad
+        height={200}
+        offset={100}
+        placeholder={
+          <div
+            style={{
+              backgroundColor: "#f0f0f0",
+              height: "200px",
+              justifyItems: "center",
+            }}
+          >
+            Loading...
+          </div>
+        }
+      >
+        <div
+          id="img_display_art"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="image-container"
+        >
+          <img
+            id="img_display_art_img"
+            src={image}
+            alt="art1"
+            style={{
+              WebkitTouchCallout: "none",
+              WebkitUserSelect: "none",
+              KhtmlUserSelect: "none",
+              MozUserSelect: "none",
+              MsUserSelect: "none",
+              userSelect: "none",
+              WebkitUserDrag: "none",
+              userDrag: "none",
+              // pointerEvents: "none",
+            }}
+          />
+          {isHovered && <div className="hover-overlay">Buy Now</div>}
+        </div>
+      </LazyLoad>
+
+      <div className="img-art-desc">
+        <div>
+          <h3>{name}</h3>
+        </div>
+        <div>current price: {price}ETH</div>
+        {/* <div>
+          <p>About this piece: {description}</p>
+        </div> */}
       </div>
     </>
   );

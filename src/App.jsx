@@ -7,15 +7,18 @@ import { Container } from "./components/Container";
 import { PageNavigation } from "./components/pageNavigation";
 // import { BuyPage } from "./components/buy";
 import { SellPage } from "./components/sell";
-// import { SupportPage } from "./components/support";
-// import { AboutPage } from "./components/about";
+import { SupportPage } from "./components/support";
+import { AboutPage } from "./components/about";
 import { Footer } from "./components/Footer";
 import SignIn from "./components/signIn";
 import Profile from "./components/profile";
 import { auth } from "./firebase/firebase";
 import "./css/fanta.css";
+import LoginForm from "./components/LoginForm";
+import ProtectedRoute from "./components/ProtectedRoute";
+// import { AuthProvider } from "./GlobalContext/AuthContext";
 const App = () => {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   console.log("Environment Variables:", import.meta.env);
 
   useEffect(() => {
@@ -30,18 +33,49 @@ const App = () => {
     setUser(signedInUser);
   };
 
+  const [showLoginForm, setShowLoginForm] = useState(false);
+  const handleOpenLoginForm = () => {
+    setShowLoginForm(true);
+  };
+
+  const handleCloseLoginForm = () => {
+    setShowLoginForm(false);
+  };
   const AppContent = () => (
     <>
-      <PageNavigation />
+      <LoginForm />
+      <PageNavigation
+        onProfileClick={handleOpenLoginForm}
+        onSellClick={handleOpenLoginForm}
+        onLoginClick={handleOpenLoginForm}
+      />
+      {showLoginForm && (
+        // <SignIn />
+        <LoginForm onClose={handleCloseLoginForm} />
+      )}
       <div id="appHeaderBack">
         <Routes>
           <Route path="/" element={<Container />} />
-          <Route path="/sell" element={<SellPage />} />
+          <Route
+            path="/sell"
+            element={
+              <ProtectedRoute>
+                <SellPage />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/buy" element={<Container />} />
-          <Route path="/profile" element={<Profile user={user} />} />
-          {/* <Route path="/art/:slug" element={<ArtDetails />} />
-          <Route path="/support" element={<SupportPage />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile user={user} />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/support" element={<SupportPage />} />
+          {/* <Route path="/art/:slug" element={<ArtDetails />} />
           <Route path="/userLogin" element={<SignIn />} />*/}
         </Routes>
       </div>
@@ -49,7 +83,13 @@ const App = () => {
     </>
   );
 
-  return <Router>{user ? <AppContent /> : <SignIn />}</Router>;
+  return (
+    <>
+      {/* // <AuthProvider> */}
+      <Router>{user ? <AppContent /> : <SignIn />}</Router>;
+      {/* // </AuthProvider> */}
+    </>
+  );
 };
 
 export default App;

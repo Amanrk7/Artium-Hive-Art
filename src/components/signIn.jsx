@@ -2,10 +2,8 @@
 import React, { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "../firebase/firebase"; // Correct import
 import artiumhiveLogo from "../assets/images/artiumhiveLogo.png";
-import { Link } from "react-router-dom";
-import { Footer } from "./Footer";
 import axios from "axios"; // Optional for backend API calls
-
+import { Footer } from "./Footer";
 const SignIn = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
@@ -50,7 +48,7 @@ const SignIn = () => {
         uid: user.uid,
         email: user.email,
       });
-      console.log("Backend response:", response.data);
+      // console.log("Backend response:", response.data);
 
       // Redirect or perform other actions after successful sign-in
       // Example: Redirect to the home page
@@ -65,7 +63,7 @@ const SignIn = () => {
     <>
       <div id="signin-mobile-ori">
         <div className="login-nav">
-          <div>
+          <div id="logo-signin-parent-div">
             <img id="logo-signin" src={artiumhiveLogo} alt="logo" />
           </div>
           <div
@@ -132,8 +130,17 @@ const SignIn = () => {
                         color: " #df4d4d",
                         fontFamily: "circular",
                         transition: ".9s ease-in-out",
+                        fontSize: "11px",
                       }}
                     >
+                      <i
+                        className="fa-solid fa-circle-exclamation"
+                        style={{
+                          color: "rgb(223, 77, 77)",
+                          fontSize: "11px",
+                          marginRight: "3px",
+                        }}
+                      ></i>
                       {errorEmail}
                     </p>
                   )}
@@ -178,7 +185,7 @@ const SignIn = () => {
                           : "fa-regular fa-eye-slash"
                       }
                       style={{
-                        color: "#b8b8b8",
+                        color: "rgb(97, 94, 94)",
                         width: "10%",
                         cursor: "pointer",
                       }}
@@ -191,8 +198,17 @@ const SignIn = () => {
                         color: " #df4d4d",
                         fontFamily: "circular",
                         transition: ".9s ease-in-out",
+                        fontSize: "11px",
                       }}
                     >
+                      <i
+                        className="fa-solid fa-circle-exclamation"
+                        style={{
+                          color: "rgb(223, 77, 77)",
+                          fontSize: "11px",
+                          marginRight: "3px",
+                        }}
+                      ></i>
                       {errorPassword}
                     </p>
                   )}
@@ -207,8 +223,17 @@ const SignIn = () => {
                         color: " #df4d4d",
                         fontFamily: "circular",
                         transition: ".9s ease-in-out",
+                        fontSize: "11px",
                       }}
                     >
+                      <i
+                        className="fa-solid fa-circle-exclamation"
+                        style={{
+                          color: "rgb(223, 77, 77)",
+                          fontSize: "11px",
+                          marginRight: "3px",
+                        }}
+                      ></i>
                       {error}
                     </p>
                   )}
@@ -252,8 +277,12 @@ const SignIn = () => {
       {/* -------------for moblie hidden---------------- */}
       <div id="login-mobile-signin-hidden">
         <div className="login-nav-hidden">
-          <div>
-            <img src={artiumhiveLogo} alt="logo" style={{ width: "47px" }} />
+          <div style={{ height: "23px", width: "50%", marginLeft: "-65px" }}>
+            <img
+              src={artiumhiveLogo}
+              alt="logo"
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            />
           </div>
           <div
             className="login-nav-hidden-div"
@@ -314,7 +343,7 @@ const SignIn = () => {
                       borderRight: "none",
                       width: "90%",
                       letterSpacing: "1px",
-                      color: "white",
+                      color: "black",
                     }}
                   />
                   {errorEmail && (
@@ -323,8 +352,17 @@ const SignIn = () => {
                         color: " #df4d4d",
                         fontFamily: "circular",
                         transition: ".9s ease-in-out",
+                        fontSize: "11px",
                       }}
                     >
+                      <i
+                        className="fa-solid fa-circle-exclamation"
+                        style={{
+                          color: "rgb(223, 77, 77)",
+                          fontSize: "11px",
+                          marginRight: "3px",
+                        }}
+                      ></i>
                       {errorEmail}
                     </p>
                   )}
@@ -359,7 +397,7 @@ const SignIn = () => {
                       borderRight: "none",
                       width: "90%",
                       letterSpacing: "1px",
-                      color: "white",
+                      color: "black",
                     }}
                     aria-describedby="passwordError"
                   />
@@ -384,8 +422,17 @@ const SignIn = () => {
                         color: " #df4d4d",
                         fontFamily: "circular",
                         transition: ".9s ease-in-out",
+                        fontSize: "11px",
                       }}
                     >
+                      <i
+                        className="fa-solid fa-circle-exclamation"
+                        style={{
+                          color: "rgb(223, 77, 77)",
+                          fontSize: "11px",
+                          marginRight: "3px",
+                        }}
+                      ></i>
                       {errorPassword}
                     </p>
                   )}
@@ -412,8 +459,17 @@ const SignIn = () => {
                         color: " #df4d4d",
                         fontFamily: "circular",
                         transition: ".9s ease-in-out",
+                        fontSize: "11px",
                       }}
                     >
+                      <i
+                        className="fa-solid fa-circle-exclamation"
+                        style={{
+                          color: "rgb(223, 77, 77)",
+                          fontSize: "11px",
+                          marginRight: "3px",
+                        }}
+                      ></i>
                       {error}
                     </p>
                   )}
