@@ -3370,3 +3370,19 @@ h2 {
 .submit-btn:hover {
   background: #0056b3;
 }
+.collection_header_div {
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.collection_header {
+  width: 73%;
+}
+.collection_header h1 {
+  width: 100%;
+  font-family: "Tanseek Modern Pro Arabic Book";
+  letter-spacing: 1px;
+}

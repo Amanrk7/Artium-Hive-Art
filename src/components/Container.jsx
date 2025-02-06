@@ -6,9 +6,13 @@ export function Container() {
   return (
     <>
       <Header />
-
-      <div id="main1-parent">
-        <Main1 data={products} />
+      <div className="collection_header_div">
+        <div className="collection_header">
+          <h1>Curated Collections</h1>
+        </div>
+        <div id="main1-parent">
+          <Main1 data={products} />
+        </div>
       </div>
     </>
   );

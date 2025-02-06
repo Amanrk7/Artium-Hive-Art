@@ -17,6 +17,7 @@ export const LogOut = ({ onClick }) => {
     <>
       {isLoggedIn ? (
         <button id="log-out-button" onClick={handleLogout}>
+        {/* <button id="log-out-button"> */}
           <i className="fa-solid fa-right-from-bracket fa-flip-both"></i>
         </button>
       ) : (

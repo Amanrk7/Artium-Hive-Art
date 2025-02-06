@@ -75,6 +75,8 @@ const App = () => {
           />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/support" element={<SupportPage />} />
+          <Route path="/logIn" element={<SignIn />} />
+
           {/* <Route path="/art/:slug" element={<ArtDetails />} />
           <Route path="/userLogin" element={<SignIn />} />*/}
         </Routes>
@@ -86,7 +88,9 @@ const App = () => {
   return (
     <>
       {/* // <AuthProvider> */}
-      <Router>{user ? <AppContent /> : <SignIn />}</Router>;
+      {/* <Router>{user ? <AppContent /> : <SignIn />}</Router> */}
+      <Router>{<AppContent />}</Router>
+
       {/* // </AuthProvider> */}
     </>
   );

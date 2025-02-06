@@ -160,4 +160,4 @@ export const SellPage = () => {
       </div>
     </div>
   );
-};
+}
