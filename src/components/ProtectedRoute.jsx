@@ -1,10 +1,12 @@
+import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { auth } from "../firebase/firebase";
+import { AuthContext } from "../GlobalContext/AuthContext";
 
 const ProtectedRoute = ({ children }) => {
-  const user = auth.currentUser;
-  if (!user) {
-    return <Navigate to="/" />; // Redirect to home if not authenticated
+  const { isLoggedIn, intendedPath } = useContext(AuthContext);
+
+  if (!isLoggedIn) {
+    return <Navigate to="/" replace />;
   }
   return children;
 };

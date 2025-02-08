@@ -146,15 +146,24 @@ const ArtCard = ({ data }) => {
       </div>
 
       {/* ---------img-art------- */}
+      {/* <React.Suspense fallback={<>...</>}></React.Suspense> */}
       <LazyLoad
         height={200}
         offset={100}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         placeholder={
           <div
             style={{
-              backgroundColor: "#f0f0f0",
-              height: "200px",
+              backgroundColor: "rgb(51, 51, 51)",
+              width: "100%",
               justifyItems: "center",
+              height: "100%",
+              color: "white",
+              fontFamily:"inherit"
             }}
           >
             Loading...
@@ -191,7 +200,7 @@ const ArtCard = ({ data }) => {
         <div>
           <h3>{name}</h3>
         </div>
-        <div>current price: {price}ETH</div>
+        <div>current price: {price}$</div>
         {/* <div>
           <p>About this piece: {description}</p>
         </div> */}

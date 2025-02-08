@@ -1,37 +1,23 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useRef, useState, useEffect, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 // import { useSelector, useDispatch } from "react-redux";
 import artiumhiveLogo from "../assets/images/artiumhiveLogo.png";
+import { AuthContext } from "../GlobalContext/AuthContext";
 import { LogOut } from "./logOut";
+import SignIn from "./signIn";
 // import { toggleStatusTab } from "../stores/cart"; // Import the toggleStatusTab action
 // import Cart from "./cart"; // Import the Cart component
-export const PageNavigation = ({
-  onProfileClick,
-  onSellClick,
-  onLoginClick,
-}) => {
-  const handleSellClick = () => {
-    if (!user) {
-      setShowSignInForm(true); // Show sign-in form if not authenticated
-    } else {
-      // Redirect to sell page or perform action
-    }
-  };
 
-  const handleProfileClick = () => {
-    if (!user) {
-      setShowSignInForm(true); // Show sign-in form if not authenticated
-    } else {
-      // Redirect to profile page or perform action
-    }
-  };
+export const PageNavigation = () => {
   const handleToggleCart = () => {
     console.log("Cart button clicked!"); // Log the click event
     dispatch(toggleStatusTab());
   };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Ref to track the menu container
-
+  const [showSignIn, setShowSignIn] = useState(false);
+  const { isLoggedIn, setIntendedPath } = useContext(AuthContext);
+  const navigate = useNavigate();
   // Function to open/close the menu
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,6 +26,16 @@ export const PageNavigation = ({
   // Function to close the menu
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  //-------showing the form when clicked on sell or profile
+  const handleProtectedRouteClick = (path) => {
+    if (!isLoggedIn) {
+      setIntendedPath(path); // Store the intended path
+      setShowSignIn(true);
+    } else {
+      navigate(path);
+    }
   };
 
   // Effect to detect clicks outside the menu
@@ -60,6 +56,7 @@ export const PageNavigation = ({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMenuOpen]);
+
   return (
     <>
       <header id="headerTag">
@@ -71,7 +68,6 @@ export const PageNavigation = ({
               {/* </h1> */}
             </Link>
           </div>
-
           <div className="header-nav-mobile-ori">
             <nav id="nav" style={{ padding: "2px" }}>
               {/* <button id="drops"> */}
@@ -83,9 +79,11 @@ export const PageNavigation = ({
               <Link
                 to="sell"
                 className="text-xl font-semibold"
-                onClick={onSellClick}
+                onClick={() => handleProtectedRouteClick("/sell")}
               >
+                {/* <button onClick={() => handleProtectedRouteClick("/sell")}> */}
                 Sell
+                {/* </button> */}
               </Link>
               {/* </button> */}
               {/* <button id="create"> */}
@@ -104,15 +102,14 @@ export const PageNavigation = ({
           <div className="header-right">
             {/* <button id="login">Login</button> */}
             {/* <Link to={logOut}> */}
-            <LogOut onClick={onLoginClick} />
+            <LogOut />
             {/* </Link> */}
-            <Link
-              to="profile"
-              className="text-xl font-semibold"
-              onClick={onProfileClick}
-            >
-              <button id="profile">
-                <i className="fa-regular fa-user"></i>
+            <Link to="profile" className="text-xl font-semibold">
+              <button
+                id="profile"
+                onClick={() => handleProtectedRouteClick("/profile")}
+              >
+                <i className="fa-solid fa-user"></i>
               </button>
             </Link>
 
@@ -135,14 +132,17 @@ export const PageNavigation = ({
             {/* Menu Content (Visible when menu is open) */}
             {isMenuOpen && (
               <>
-                <LogOut onClick={onLoginClick} />
+                <LogOut />
                 <Link
                   to="profile"
                   className="text-xl font-semibold"
-                  onClick={onProfileClick}
+                  // onClick={onProfileClick}
                 >
-                  <button id="profile">
-                    <i className="fa-regular fa-user"></i>
+                  <button
+                    id="profile"
+                    onClick={() => handleProtectedRouteClick("/profile")}
+                  >
+                    <i className="fa-solid fa-user"></i>
                   </button>
                 </Link>
 
@@ -153,7 +153,7 @@ export const PageNavigation = ({
                 {/* Close Button (Cross Icon) */}
                 <button id="cart" onClick={handleCloseMenu}>
                   <i
-                    className="fa-regular fa-circle-xmark"
+                    className="fa-solid fa-circle-xmark"
                     style={{ color: "#000000" }}
                   ></i>
                 </button>
@@ -173,9 +173,11 @@ export const PageNavigation = ({
             <Link
               to="sell"
               className="text-xl font-semibold"
-              onClick={onSellClick}
+              onClick={() => handleProtectedRouteClick("/sell")}
             >
+              {/* <button onClick={() => handleProtectedRouteClick("/sell")}> */}
               Sell
+              {/* </button> */}
             </Link>
             {/* </button> */}
             {/* <button id="create"> */}
@@ -190,6 +192,42 @@ export const PageNavigation = ({
             {/* </button> */}
           </nav>
         </div>
+
+        {showSignIn && !isLoggedIn && (
+          <div
+            style={{
+              position: "absolute",
+              zIndex: "999",
+              width: "100vw",
+              height: "100vh",
+              left: "0",
+              right: "0",
+              top: "0",
+              bottom: "0",
+            }}
+          >
+            <button
+              id="go_back_from_login"
+              onClick={() => setShowSignIn(false)}
+              style={{
+                background: "none",
+                border: "none",
+                padding: "0",
+                position: "absolute",
+                top: "4px",
+                // left: "4px",
+                zIndex: " 1000",
+                boxShadow: "none",
+              }}
+            >
+              <i
+                className="fa-solid fa-circle-xmark"
+                style={{ color: "#000000" }}
+              ></i>
+            </button>
+            <SignIn />
+          </div>
+        )}
       </header>
     </>
   );

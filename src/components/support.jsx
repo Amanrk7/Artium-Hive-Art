@@ -15,15 +15,19 @@ const styles = {
   },
   heading: {
     fontSize: "2.5rem",
-    color: "#333",
+    // color: "#333",
+    color: "rgb(255 255 255)",
     marginBottom: "10px",
     fontFamily: "'Phonk Contrast DEMO'",
   },
   text: {
     fontSize: "1.3rem",
-    color: "#666",
+    // color: "#666",
+    color: "rgb(255 255 255)",
+
     marginBottom: "20px",
     fontFamily: "'BOLDE'",
+    letterSpacing: "1.5px",
   },
   button: {
     backgroundColor: "#ffdd00",
@@ -37,6 +41,7 @@ const styles = {
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     transition: "background-color 0.3s ease, transform 0.3s ease",
     fontFamily: "'BOLDE'",
+    letterSpacing: "1px",
     ":hover": {
       backgroundColor: "#ffcc00", // Darker yellow on hover
       transform: "scale(1.05)", // Slightly scale up
@@ -51,11 +56,13 @@ export const SupportPage = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.heading}>Support Us</h1>
-      <p style={styles.text}>
+      <h1 id="support_header" style={styles.heading}>
+        Support Us
+      </h1>
+      <p id="support_quote" style={styles.text}>
         If you enjoy our work, consider buying us a coffee to keep us going!
       </p>
-      <button style={styles.button} onClick={handleBuyCoffee}>
+      <button id="support_btn" style={styles.button} onClick={handleBuyCoffee}>
         <FontAwesomeIcon icon={faCoffee} style={{ marginRight: "10px" }} />
         Buy Us a Coffee
       </button>

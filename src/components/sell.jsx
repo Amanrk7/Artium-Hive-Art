@@ -11,6 +11,7 @@ import {
 import { v4 as uuidv4 } from "uuid";
 import { FileUpload } from "./fileUpload";
 import { useRef, useState } from "react";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 export const SellPage = () => {
   const [files, setFiles] = useState([]);
@@ -21,6 +22,7 @@ export const SellPage = () => {
   const [error, setError] = useState("");
   const user = auth.currentUser; // Ensure you have a valid user object
   const isButtonDisabled = files.length === 0 || priceErr;
+  const [isUploaded, setIsUploaded] = useState(false);
 
   const handleFileChange = (selectedFiles) => {
     setFiles([...selectedFiles]);
@@ -51,14 +53,22 @@ export const SellPage = () => {
             updatedAt: serverTimestamp(),
           };
 
-          console.log("Payload:", payload); // Log the payload
+          // console.log("Payload:", payload); // Log the payload
 
           await setDoc(doc(collection(db, "submissions"), uniqueId), payload);
         });
 
         await Promise.all(uploadPromises);
         setLoading(false);
-        setFileUploaded(true);
+
+        setIsUploaded(true);
+
+        setTimeout(() => {
+          setIsUploaded(false);
+        }, 7000);
+
+        setTextInput("");
+        setFiles([]);
       } catch (error) {
         setLoading(false);
         setError("Upload failed: " + error.message);
@@ -130,14 +140,17 @@ export const SellPage = () => {
                 style={{ pointerEvents: isButtonDisabled ? "none" : "auto" }}
               >
                 {loading ? (
-                  <div className="loader"></div>
-                ) : (
+                  // <div className="loader"></div>
+                  <i className="fas fa-spinner fa-spin"></i>
+                ) : !isUploaded ? (
                   <span
                     id="btn_upload_file"
                     className="material-symbols-outlined"
                   >
                     arrow_outward
                   </span>
+                ) : (
+                  <i id="success_icon" className="fa-solid fa-circle-check"></i>
                 )}
               </div>
             </div>{" "}
@@ -160,4 +173,4 @@ export const SellPage = () => {
       </div>
     </div>
   );
-}
+};

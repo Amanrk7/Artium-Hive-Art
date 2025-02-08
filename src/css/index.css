@@ -1124,6 +1124,57 @@ small {
 .footer_hidden {
   display: none;
 }
+.About_main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  justify-items: center;
+  color: white;
+  gap: 23px;
+}
+.moto_div h1 {
+  font-family: "Phonk Contrast DEMO";
+}
+
+.abt_2nd_child p {
+  font-family: "Tanseek Modern Pro Arabic Book";
+  letter-spacing: 1.5px;
+}
+.moto_contents h3 {
+  font-family: "BOLDE";
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+}
+.quotation-img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin: 10px 0; /* Adjust spacing */
+  display: block; /* Center the image */
+  margin-left: auto;
+  margin-right: auto;
+}
+.moto_contents h3 {
+  letter-spacing: 1.7px;
+  font-size: 1.4rem;
+}
+.abt_2nd_child p {
+  letter-spacing: 1.5px;
+  font-size: 20px;
+}
+/* .abt_1st_child {
+  background: url("../assets/images/quotes.jpg");
+} */
+
+#profile-page-child1 {
+  margin-top: 131px;
+}
+#go_back_from_login {
+  right: 4px;
+}
+
 /* ---------media-queries---------------------------------------------------- */
 
 /* ------------------1 for phones, less than or =425px---------------- */
@@ -1730,6 +1781,59 @@ small {
     margin-top: 0px;
     line-height: 15px;
   }
+  .abt_2nd_child p {
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    text-align: justify;
+  }
+  .moto_contents h3 {
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+  }
+  .About_main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    justify-items: center;
+    color: white;
+    gap: 23px;
+    flex-direction: column;
+  }
+  .footer {
+    padding: 55px 8px 0px 8px;
+  }
+  .moto_contents h3 {
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    font-family: BOLDE;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+  }
+  .moto_contents {
+    text-align: left;
+  }
+
+  .About_main {
+    padding-top: 50%;
+    /* padding-bottom: 50%; */
+  }
+  /* .abt_1st_child{
+    margin-top: 275px;
+  }  */
+
+  #log-out-button,
+  #profile,
+  #cart {
+    font-size: 9px;
+    padding: 8px;
+    height: 26px;
+  }
 }
 
 /* ------------------1 for tablets, > 425px and < 768px---------------- */
@@ -2259,6 +2363,44 @@ small {
     font-size: 9px;
     margin-right: 2px;
   }
+
+  .abt_2nd_child p {
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    text-align: justify;
+  }
+  .moto_contents h3 {
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+  }
+  .About_main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    justify-items: center;
+    color: white;
+    gap: 23px;
+    flex-direction: column;
+  }
+  .abt_2nd_child {
+    margin-top: 0;
+  }
+  .moto_contents h3 {
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    font-family: BOLDE;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+  }
+  .moto_contents {
+    text-align: left;
+  }
 }
 
 /* ----------from 720px to 800px-------------------- */
@@ -2716,11 +2858,314 @@ small {
   .footer_main {
     width: 80%;
   }
+
+  .abt_2nd_child p {
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    text-align: justify;
+  }
+  .moto_contents h3 {
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+  }
+  .About_main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    justify-items: center;
+    color: white;
+    gap: 23px;
+    flex-direction: column;
+  }
+  .abt_2nd_child {
+    margin-top: 0;
+  }
+  .moto_contents h3 {
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    font-family: BOLDE;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+  }
+  .moto_contents {
+    text-align: left;
+  }
 }
 
+#headerDiv {
+  color: white;
+  margin-top: 131px;
+}
+#sellPage-1st-div {
+  height: 100%;
+}
+
+#headerTag {
+  animation: headertag_anim 0.7s ease;
+}
+@keyframes headertag_anim {
+  0% {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+#headerDiv {
+  transition: 0.7s ease;
+  /* margin-top: 221px; */
+  animation: headerAnim 0.7s ease forwards;
+}
+@keyframes headerAnim {
+  0% {
+    top: -100px;
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 141px;
+    margin-top: 131px;
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+.collection_header_div {
+  animation: collection_anim 0.7s ease forwards;
+}
+@keyframes collection_anim {
+  0% {
+    opacity: 0;
+    margin-top: 141px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+#root,
+#appHeaderBack {
+  animation: root_Anim 0.9s ease forwards;
+}
+@keyframes root_Anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#support_header {
+  animation: supp_header_anim 0.7s ease forwards;
+}
+@keyframes supp_header_anim {
+  0% {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+#signindiv_subdiv_first-hidden {
+  animation: signindiv_subdiv_first-hidden_anim 0.7s ease forwards;
+}
+@keyframes signindiv_subdiv_first-hidden_anim {
+  0% {
+    margin-top: 200px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+.login-nav-hidden {
+  animation: login-nav-hidden_anim 0.7s ease forwards;
+}
+@keyframes login-nav-hidden_anim {
+  0% {
+    margin-top: -141px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+#support_btn {
+  animation: supp_header_btn_anim 0.7s ease forwards;
+}
+@keyframes supp_header_btn_anim {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.abt_1st_child {
+  animation: abt_1st_child_anim 0.7s ease forwards;
+}
+@keyframes abt_1st_child_anim {
+  0% {
+    margin-top: -141px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+.abt_2nd_child {
+  animation: abt_2nd_child_anim 0.7s ease forwards;
+}
+@keyframes abt_2nd_child_anim {
+  0% {
+    margin-top: 200px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+#signin-mobile-ori {
+  animation: signin-mobile-ori 0.7s ease forwards;
+}
+@keyframes signin-mobile-ori {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#loginPageImg-Ins {
+  animation: loginPageImg-Ins 0.7s ease forwards;
+}
+@keyframes loginPageImg-Ins {
+  0% {
+    opacity: 0;
+    margin-top: -200px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.signInDiv-leftside {
+  animation: signInDiv-leftside 0.7s ease forwards;
+}
+@keyframes signInDiv-leftside {
+  0% {
+    opacity: 0;
+    margin-top: 200px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+.sell-page-header {
+  animation: sell-page-header 0.7s ease forwards;
+}
+@keyframes sell-page-header {
+  0% {
+    opacity: 0;
+    margin-top: -200px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.img-upload-parent-box {
+  animation: img-upload-parent-box_anim 0.7s ease forwards;
+}
+@keyframes img-upload-parent-box_anim {
+  0% {
+    opacity: 0;
+    margin-top: 500px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+#profile-page-child1 > h1 {
+  animation: profile-page-child1_h1 0.7s ease forwards;
+}
+@keyframes profile-page-child1_h1 {
+  0% {
+    opacity: 0;
+    margin-top: -200px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+#profile-page-child1 > ul {
+  animation: profile-page-child1_ul_anim 0.7s ease forwards;
+}
+@keyframes profile-page-child1_ul_anim {
+  0% {
+    opacity: 0;
+    margin-top: 200px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+#success_icon {
+  animation: success_icon_anim 0.7s ease forwards;
+}
+@keyframes success_icon_anim {
+  0% {
+    opacity: 0;
+    margin-top: 2px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+    color: #1dd329;
+  }
+}
+
+#profile-page-child1 > ul{
+  padding: 0 11px 0 11px;
+}
 /* ------------------1 for monitors, > 1024px and < 2560---------------- */
 @media only screen and (min-width: 1115px) and (max-width: 2560px) {
   /* ------login-page-start------------- */
+  #go_back_from_login {
+    right: 33px;
+  }
   .footer {
     width: 100%;
   }
@@ -2766,9 +3211,7 @@ small {
   #appHeaderBack {
     width: 90%;
   }
-  #headerDiv {
-    top: 34px;
-  }
+
   #img_display_art {
     justify-content: center;
   }
@@ -2987,10 +3430,7 @@ small {
     justify-content: center;
     height: 5em;
   }
-  #headerDiv {
-    top: 78px;
-    margin-top: 106px;
-  }
+
   #header-div-h1-2 {
     font-size: 51px;
     /* margin-top: 7px; */
@@ -3083,7 +3523,288 @@ small {
   .img-upload-parent-box {
     width: 70%;
   }
-}
+  #headerTag {
+    height: 9em;
+  }
+  .abt_2nd_child {
+    width: 40%;
+    margin-top: 0;
+    text-align: justify;
+  }
+
+  #headerDiv div h1 {
+    width: 100%;
+  }
+  #profile-page-child1 {
+    margin-top: 221px;
+  }
+
+  #log-out-button,
+  #profile,
+  #cart {
+    padding: 6px 16px 6px 16px;
+    font-size: 15px;
+  }
+  .sell-page-container {
+    margin-top: 221px;
+    color: white;
+  }
+  #sellPage-1st-div {
+    width: 100%;
+    height: 100vh;
+  }
+  .img-upload-parent-box {
+    box-shadow: 0px -9px 12px 0px #ffffff;
+  }
+
+  .imgUpload-section {
+    border: 0;
+  }
+  .header-right {
+    width: 10%;
+  }
+
+  #headerTag {
+    animation: headertag_anim 0.7s ease;
+  }
+  @keyframes headertag_anim {
+    0% {
+      margin-top: -100px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+
+  #headerDiv {
+    transition: 0.7s ease;
+    /* margin-top: 221px; */
+    animation: headerAnim 0.7s ease forwards;
+  }
+  @keyframes headerAnim {
+    0% {
+      /* top: 0px;
+      margin-top: 0px; */
+      opacity: 0;
+    }
+    100% {
+      top: 141px;
+      margin-top: 221px;
+      opacity: 1;
+      z-index: 0;
+    }
+  }
+
+  .collection_header_div {
+    animation: collection_anim 0.7s ease forwards;
+  }
+  @keyframes collection_anim {
+    0% {
+      opacity: 0;
+      margin-top: 141px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  #root,
+  #appHeaderBack {
+    animation: root_Anim 0.9s ease forwards;
+  }
+  @keyframes root_Anim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #support_header {
+    animation: supp_header_anim 0.7s ease forwards;
+  }
+  @keyframes supp_header_anim {
+    0% {
+      margin-top: -100px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+
+  #support_quote {
+    animation: supp_header_q_anim 0.7s ease forwards;
+  }
+  @keyframes supp_header_q_anim {
+    0% {
+      margin-right: -900px;
+      opacity: 0;
+    }
+    100% {
+      margin-right: 0px;
+      opacity: 1;
+    }
+  }
+
+  #support_btn {
+    animation: supp_header_btn_anim 0.7s ease forwards;
+  }
+  @keyframes supp_header_btn_anim {
+    0% {
+      opacity: 0;
+      margin-top: 100px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  .abt_1st_child {
+    animation: abt_1st_child_anim 0.7s ease forwards;
+  }
+  @keyframes abt_1st_child_anim {
+    0% {
+      margin-top: -141px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+  .abt_2nd_child {
+    animation: abt_2nd_child_anim 0.7s ease forwards;
+  }
+  @keyframes abt_2nd_child_anim {
+    0% {
+      margin-top: 141px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+
+  #signin-mobile-ori {
+    animation: signin-mobile-ori 0.7s ease forwards;
+  }
+  @keyframes signin-mobile-ori {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #loginPageImg-Ins {
+    animation: loginPageImg-Ins 0.7s ease forwards;
+  }
+  @keyframes loginPageImg-Ins {
+    0% {
+      opacity: 0;
+      margin-top: -200px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  .signInDiv-leftside {
+    animation: signInDiv-leftside 0.7s ease forwards;
+  }
+  @keyframes signInDiv-leftside {
+    0% {
+      opacity: 0;
+      margin-top: 200px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  .sell-page-header {
+    animation: sell-page-header 0.7s ease forwards;
+  }
+  @keyframes sell-page-header {
+    0% {
+      opacity: 0;
+      margin-top: -200px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  .img-upload-parent-box {
+    animation: img-upload-parent-box_anim 0.7s ease forwards;
+  }
+  @keyframes img-upload-parent-box_anim {
+    0% {
+      opacity: 0;
+      margin-top: 500px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  #profile-page-child1 > h1 {
+    animation: profile-page-child1_h1 0.7s ease forwards;
+  }
+  @keyframes profile-page-child1_h1 {
+    0% {
+      opacity: 0;
+      margin-top: -200px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  #profile-page-child1 > ul {
+    animation: profile-page-child1_ul_anim 0.7s ease forwards;
+  }
+  @keyframes profile-page-child1_ul_anim {
+    0% {
+      opacity: 0;
+      margin-top: 200px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  #success_icon {
+    animation: success_icon_anim 0.7s ease forwards;
+  }
+  @keyframes success_icon_anim {
+    0% {
+      opacity: 0;
+      margin-top: 2px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+      color: #1dd329;
+    }
+  }
+
+  #profile-page-child1 > ul{
+    padding: 0;
+  }}
 
 /* -----------for miscrosoft surface duo tab-------------- */
 /* @media only screen and (min-width: 1114px) and (min-height: 705px) {
@@ -3211,39 +3932,6 @@ width: 70px;
   border-bottom: 0.9px solid #b8b8b9;
 }
 
-.About_main {
-  height: 100vh;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  text-align: center;
-  justify-items: center;
-}
-.moto_div h1 {
-  font-family: "Phonk Contrast DEMO";
-}
-
-.abt_2nd_child p {
-  font-family: "Tanseek Modern Pro Arabic Book";
-  letter-spacing: 1.5px;
-}
-.moto_contents h3 {
-  font-family: "BOLDE";
-  letter-spacing: 1.5px;
-  font-size: 1rem;
-}
-.quotation-img {
-  width: 50px; /* Adjust size as needed */
-  height: auto;
-  margin: 10px 0; /* Adjust spacing */
-  display: block; /* Center the image */
-  margin-left: auto;
-  margin-right: auto;
-}
-/* .abt_1st_child {
-  background: url("../assets/images/quotes.jpg");
-} */
 #main1-parent > div:last-child {
   padding-bottom: 0;
   padding-top: 0;
@@ -3385,4 +4073,87 @@ h2 {
   width: 100%;
   font-family: "Tanseek Modern Pro Arabic Book";
   letter-spacing: 1px;
+}
+#main1 {
+  height: fit-content;
+  box-shadow: 0 -4px 10px #ffffff;
+  background-color: transparent;
+}
+#img_display_art {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  width: 90%;
+}
+
+#main1-parent,
+#root,
+#headerDiv {
+  background: #000000;
+}
+#headerDiv {
+  color: white;
+  /* margin-top: 221px; */
+}
+.footer {
+  background-color: white;
+}
+#headerTag {
+  background-color: white;
+}
+.img-art-desc h3 {
+  color: #ffffff;
+}
+.img-art-desc > div:nth-child(2) {
+  color: #ffffff;
+}
+
+blockquote::after {
+  border-left: 7px solid #eac945;
+}
+.moto_div h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.moto_contents h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+}
+/* #sellPage-header,  */
+#headerDiv div h1 {
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+#profile-page-child1 > ul li > p {
+  color: #ffffff;
+}
+#profile-page-child1 {
+  color: white;
+}
+.price-input {
+  border: 0.9px solid #535353;
+}
+#browse-files-btn {
+  box-shadow: 1px 2px #ffdd6a;
+  border: 1.5px solid #ffdd6a;
+  color: white;
+}
+
+.upload-container {
+  border: 2px dashed #535353;
+}
+.upload-instructions > h3,
+.upload-instructions ul li {
+  color: #ffdd6a;
+}
+.sell-page-container {
+  color: white;
+}
+#headerTag,
+.header-nav-mobile-hidden {
+  box-shadow: rgb(255 255 255) 0px 3px 8px 0;
+  border: 0;
+}
+#main1-parent > div:last-child {
+  padding: 7px 0 5px 0;
 }

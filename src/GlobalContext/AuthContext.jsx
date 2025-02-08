@@ -1,29 +1,15 @@
-import React, { createContext, useState, useEffect } from "react";
-import { auth } from "../firebase/firebase";
-import { onAuthStateChanged } from "firebase/auth";
+// AuthContext.jsx
+import React, { createContext, useState } from "react";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [showSignInForm, setShowSignInForm] = useState(false);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [intendedPath, setIntendedPath] = useState('/');
 
   return (
-    <AuthContext.Provider value={{ user, showSignInForm, setShowSignInForm }}>
+    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, intendedPath, setIntendedPath }}>
       {children}
-      {showSignInForm && <SignInForm onClose={() => setShowSignInForm(false)} />}
     </AuthContext.Provider>
   );
 };

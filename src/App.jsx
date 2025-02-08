@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { Provider } from "react-redux";
 import { Container } from "./components/Container";
@@ -14,9 +14,10 @@ import SignIn from "./components/signIn";
 import Profile from "./components/profile";
 import { auth } from "./firebase/firebase";
 import "./css/fanta.css";
-import LoginForm from "./components/LoginForm";
+// import LoginForm from "./components/LoginForm";
 import ProtectedRoute from "./components/ProtectedRoute";
-// import { AuthProvider } from "./GlobalContext/AuthContext";
+import { AuthProvider } from "./GlobalContext/AuthContext";
+
 const App = () => {
   const [user, setUser] = useState(true);
   console.log("Environment Variables:", import.meta.env);
@@ -29,30 +30,14 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
-  const handleSignIn = (signedInUser) => {
-    setUser(signedInUser);
-  };
+  // const handleSignIn = (signedInUser) => {
+  //   setUser(signedInUser);
+  // };
 
-  const [showLoginForm, setShowLoginForm] = useState(false);
-  const handleOpenLoginForm = () => {
-    setShowLoginForm(true);
-  };
-
-  const handleCloseLoginForm = () => {
-    setShowLoginForm(false);
-  };
   const AppContent = () => (
     <>
-      <LoginForm />
-      <PageNavigation
-        onProfileClick={handleOpenLoginForm}
-        onSellClick={handleOpenLoginForm}
-        onLoginClick={handleOpenLoginForm}
-      />
-      {showLoginForm && (
-        // <SignIn />
-        <LoginForm onClose={handleCloseLoginForm} />
-      )}
+      <PageNavigation />
+
       <div id="appHeaderBack">
         <Routes>
           <Route path="/" element={<Container />} />
@@ -87,11 +72,10 @@ const App = () => {
 
   return (
     <>
-      {/* // <AuthProvider> */}
-      {/* <Router>{user ? <AppContent /> : <SignIn />}</Router> */}
-      <Router>{<AppContent />}</Router>
-
-      {/* // </AuthProvider> */}
+      <AuthProvider>
+        {/* <Router>{!showSignInForm ? <AppContent /> : <SignIn />}</Router> */}
+        <Router>{<AppContent />}</Router>
+      </AuthProvider>
     </>
   );
 };
