@@ -345,7 +345,8 @@ hr {
 #instagram:hover,
 #telegram:hover,
 #x:hover,
-#gmail:hover {
+#gmail:hover,
+#collection_nav ul li a:hover {
   color: #8d8d8d;
 }
 #logoText {
@@ -573,9 +574,10 @@ button a {
 }
 #main1-1st-content:hover,
 #img_display_art_img:hover {
-  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.9s ease;
 
-  transform: translateY(3%);
+  /* transform: translateY(3%); */
+  scale: 1.5;
   cursor: pointer;
 }
 #loginPageImg-Ins {
@@ -1174,7 +1176,21 @@ small {
 #go_back_from_login {
   right: 4px;
 }
-
+#collection_nav {
+  width: 100%;
+  position: sticky;
+  top: 62px;
+  z-index: 3;
+  justify-items: center;
+  align-content: center;
+}
+#collection_nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Tanseek Modern Pro Arabic Book";
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
 /* ---------media-queries---------------------------------------------------- */
 
 /* ------------------1 for phones, less than or =425px---------------- */
@@ -2896,6 +2912,14 @@ small {
   .moto_contents {
     text-align: left;
   }
+  #collection_nav {
+    width: 100%;
+    position: sticky;
+    top: 47px;
+    z-index: 3;
+    justify-items: center;
+    align-content: center;
+  }
 }
 
 #headerDiv {
@@ -3157,7 +3181,7 @@ small {
   }
 }
 
-#profile-page-child1 > ul{
+#profile-page-child1 > ul {
   padding: 0 11px 0 11px;
 }
 /* ------------------1 for monitors, > 1024px and < 2560---------------- */
@@ -3802,9 +3826,23 @@ small {
     }
   }
 
-  #profile-page-child1 > ul{
+  #profile-page-child1 > ul {
     padding: 0;
-  }}
+  }
+
+  #collection_nav {
+    top: 140px;
+  }
+
+  #collection_nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Tanseek Modern Pro Arabic Book";
+    font-size: 23px;
+    letter-spacing: 1.5px;
+    transform: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
 
 /* -----------for miscrosoft surface duo tab-------------- */
 /* @media only screen and (min-width: 1114px) and (min-height: 705px) {
@@ -3841,11 +3879,6 @@ width: 70px;
   padding: 58px 90px 0 90px;
 } */
 
-#main1-parent {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  width: 100%;
-}
 #img_display_art img {
   width: 100%;
   height: 100%;
@@ -3889,16 +3922,25 @@ width: 70px;
   width: 90%;
 }
 #main1-parent {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: inherit;
+  position: relative;
+  z-index: 2;
+  justify-self: center;
+  justify-items: center;
+}
+.collection_div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  width: 80%;
+  width: 100%;
   justify-self: center;
   justify-items: center;
   row-gap: 37px;
   background-color: inherit;
-  position: relative;
-  z-index: 2;
-  background-color: #ebe3d3;
+
+  /* background-color: #ebe3d3; */
 }
 /* .footer-child1 {
   width: 100%;
@@ -3972,8 +4014,15 @@ width: 70px;
   animation: scaleUp 0.3s ease;
   cursor: pointer;
   font-family: "Phonk Contrast DEMO";
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  /* opacity: 0; */
 }
-
+/* @media (hover: hover) and (pointer: fine) {
+  .img_display_art:hover .overlay {
+    opacity: 1;
+  }
+} */
 @keyframes scaleUp {
   from {
     transform: scale(0.9);
@@ -4156,4 +4205,35 @@ blockquote::after {
 }
 #main1-parent > div:last-child {
   padding: 7px 0 5px 0;
+}
+
+#collection_nav ul {
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  backdrop-filter: blur(56px);
+  background: transparent;
+  border-radius: 39px;
+  justify-content: space-around;
+  width: 100%;
+  padding: 4px;
+  display: flex;
+}
+#collection_nav ul li {
+  list-style: none;
+}
+
+#hindu_collection_header,
+#nature_collection_header,
+#art_collection_header {
+  color: white;
+  font-family: "Phonk Contrast DEMO";
+  padding: 21px 0px 17px 12px;
+  width: 90%;
+  justify-self: flex-start;
+}
+#hindu_collection,
+#nature_collection,
+#art_collection {
+  width: 100%;
 }

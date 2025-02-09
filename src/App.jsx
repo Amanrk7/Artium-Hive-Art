@@ -20,7 +20,7 @@ import { AuthProvider } from "./GlobalContext/AuthContext";
 
 const App = () => {
   const [user, setUser] = useState(true);
-  console.log("Environment Variables:", import.meta.env);
+  // console.log("Environment Variables:", import.meta.env);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {

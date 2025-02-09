@@ -8,13 +8,14 @@ import { AuthContext } from "../GlobalContext/AuthContext";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+const SignIn = ({ onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorPassword, setErrorPassword] = useState("");
   const [errorEmail, setErrorEmail] = useState("");
   const [error, setError] = useState("");
+
   const { isLoggedIn, setIsLoggedIn, intendedPath } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -98,7 +99,14 @@ const SignIn = () => {
               {/* --------left side------ */}
               <div className="signInDiv-leftside">
                 <div id="signindiv_subdiv_first">
-                  <div className="logo-login-grand-parent">
+                  <div
+                    className="logo-login-grand-parent"
+                    style={{
+                      display: "flex",
+
+                      alignItems: "center",
+                    }}
+                  >
                     <div
                       style={{
                         width: "100%",
@@ -107,6 +115,25 @@ const SignIn = () => {
                     >
                       Log into Artium Hive
                     </div>
+                    <button
+                      id="go_back_from_login"
+                      onClick={() => onClose(false)}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        padding: "0",
+                        // position: "absolute",
+                        // zIndex: "1000",
+                        boxShadow: "none",
+                        // top: "27.6%",
+                        // left: "81%",
+                      }}
+                    >
+                      <i
+                        className="fa-solid fa-circle-xmark"
+                        style={{ color: "#000000" }}
+                      ></i>
+                    </button>
                   </div>
                   <div
                     className="mainLoginFields-div"
@@ -332,7 +359,13 @@ const SignIn = () => {
               {/* --------left side------ */}
               <div className="signInDiv-leftside-hidden">
                 <div id="signindiv_subdiv_first-hidden">
-                  <div className="logo-login-grand-parent">
+                  <div
+                    className="logo-login-grand-parent"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
                     <div
                       style={{
                         width: "100%",
@@ -341,6 +374,25 @@ const SignIn = () => {
                     >
                       Log into Artium Hive
                     </div>
+                    <button
+                      id="go_back_from_login"
+                      onClick={() => onClose(false)}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        padding: "0",
+                        // position: "absolute",
+                        // zIndex: "1000",
+                        boxShadow: "none",
+                        // top: "27.6%",
+                        // left: "81%",
+                      }}
+                    >
+                      <i
+                        className="fa-solid fa-circle-xmark"
+                        style={{ color: "#000000" }}
+                      ></i>
+                    </button>
                   </div>
                   <div
                     className="mainLoginFields-div"

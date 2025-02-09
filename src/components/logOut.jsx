@@ -56,9 +56,11 @@ export const LogOut = () => {
             right: "0",
             top: "0",
             bottom: "0",
+            justifyItems: "center",
+            alignContent: "center",
           }}
         >
-          <button
+          {/* <button
             id="go_back_from_login"
             onClick={() => setShowSignIn(false)}
             style={{
@@ -66,17 +68,18 @@ export const LogOut = () => {
               border: "none",
               padding: "0",
               position: "absolute",
-              top: "4px",
               zIndex: "1000",
               boxShadow: "none",
+              top: "27.6%",
+              left: "81%",
             }}
           >
             <i
               className="fa-solid fa-circle-xmark"
               style={{ color: "#000000" }}
             ></i>
-          </button>
-          <SignIn />
+          </button> */}
+          <SignIn onClose = {setShowSignIn}/>
         </div>
       )}
 

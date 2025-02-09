@@ -29,6 +29,11 @@ const ArtCard = ({ data }) => {
     return () => unsubscribe();
   }, []);
 
+  const handleClick = () => {
+    if (isHovered) {
+      setShowOverlay(!isHovered);
+    }
+  };
   const handleSentArt = async () => {
     console.log(`sending.... email to ${user.email}`);
 
@@ -163,7 +168,7 @@ const ArtCard = ({ data }) => {
               justifyItems: "center",
               height: "100%",
               color: "white",
-              fontFamily:"inherit"
+              fontFamily: "inherit",
             }}
           >
             Loading...
@@ -174,6 +179,8 @@ const ArtCard = ({ data }) => {
           id="img_display_art"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onClick={() => setIsHovered(!isHovered)}
+          // onTouchStart={() => setIsHovered(!isHovered)}
           className="image-container"
         >
           <img
@@ -189,10 +196,18 @@ const ArtCard = ({ data }) => {
               userSelect: "none",
               WebkitUserDrag: "none",
               userDrag: "none",
-              // pointerEvents: "none",
+              pointerEvents: "auto",
+              // scale: isHovered ? 1.5 : 0
             }}
           />
-          {isHovered && <div className="hover-overlay">Buy Now</div>}
+          {isHovered && (
+            <div
+              className="hover-overlay"
+              style={{ opacity: isHovered ? 1 : 0 }}
+            >
+              Buy Now
+            </div>
+          )}
         </div>
       </LazyLoad>
 
