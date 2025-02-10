@@ -22,7 +22,7 @@ import { RefundPolicy } from "./components/refundPolicy";
 import ContactUs from "./components/contactUs";
 import { TermsAndConditions } from "./components/TermsAndConditions";
 const App = () => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(true);  
   // console.log("Environment Variables:", import.meta.env);
 
   useEffect(() => {
