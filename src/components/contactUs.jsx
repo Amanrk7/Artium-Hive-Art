@@ -174,10 +174,10 @@ const ContactUs = () => {
               India, 462041  Dist-BHOPAL
             </InfoText>
           </InfoItem>
-          <InfoItem>
+          {/* <InfoItem>
             <Icon>📞</Icon>
             <InfoText>+91 9990253738</InfoText>
-          </InfoItem>
+          </InfoItem> */}
           <InfoItem>
             <Icon>📧</Icon>
             <InfoText>contact@artiumhive.art</InfoText>
