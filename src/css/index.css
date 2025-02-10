@@ -4347,8 +4347,11 @@ blockquote::after {
   text-align: center;
 }
 
-.cmqFHy{
-  animation: contactUsAnim 0.9s ease;
+.cmqFHy,
+.vkgRV,
+.jJLueI,
+.jKsmbn {
+  animation: contactUsAnim 0.7s ease;
 }
 
 @keyframes contactUsAnim {
@@ -4358,7 +4361,7 @@ blockquote::after {
   }
   to {
     margin-top: 155px;
-    
+
     opacity: 1;
   }
 }

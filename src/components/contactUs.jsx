@@ -165,15 +165,15 @@ const ContactUs = () => {
 
         {/* Contact Information */}
         <ContactInfo>
-          <InfoTitle>Contact Information</InfoTitle>
-          <InfoItem>
+          <InfoTitle>Connect With Us</InfoTitle>
+          {/* <InfoItem>
             <Icon>📍</Icon>
             <InfoText>
               MAYA INCOPRATION, HNO. 303 GANESH GALAXY CITY BUILDING AYODHYA
               BYPASS ROAD BHOPAL <br />
               India, 462041  Dist-BHOPAL
             </InfoText>
-          </InfoItem>
+          </InfoItem> */}
           {/* <InfoItem>
             <Icon>📞</Icon>
             <InfoText>+91 9990253738</InfoText>
@@ -182,18 +182,54 @@ const ContactUs = () => {
             <Icon>📧</Icon>
             <InfoText>contact@artiumhive.art</InfoText>
           </InfoItem>
+          <div
+            style={{
+              display: "flex",
+            //   justifyContent: "center",
+            //   justifyItems: "center",
+            }}
+          >
+            <InfoItem>
+              <Icon>
+                <div className="instagram-icon">
+                  <a
+                    href="https://www.instagram.com/artiumhive/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i id="instagram" className="fa-brands fa-instagram"></i>{" "}
+                  </a>
+                </div>
+              </Icon>
+              {/* <InfoText>contact@artiumhive.art</InfoText> */}
+            </InfoItem>
+            <InfoItem>
+              <Icon>
+                <div>
+                  <a
+                    href="https://x.com/ArtiumHive?t=ZqhhacLJ8laU3w9hJtDWfQ&s=08"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i id="x" className="fa-brands fa-x-twitter"></i>{" "}
+                  </a>
+                </div>
+              </Icon>
+              {/* <InfoText>contact@artiumhive.art</InfoText> */}
+            </InfoItem>
+          </div>
         </ContactInfo>
       </ContactGrid>
 
       {/* Embedded Map */}
-      <MapContainer>
+      {/* <MapContainer>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715317365928!2d72.83260931538497!3d19.04198825790038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8f6f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2sCreative%20City!5e0!3m2!1sen!2sin!4v1631234567890!5m2!1sen!2sin"
           title="ArtiumHive Location"
           allowFullScreen
           loading="lazy"
         />
-      </MapContainer>
+      </MapContainer> */}
     </ContactPageContainer>
   );
 };
