@@ -19,9 +19,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./GlobalContext/AuthContext";
 import { PrivacyPolicy } from "./components/privacyPolicy";
 import { RefundPolicy } from "./components/refundPolicy";
-import { TermsAndConditions } from "./components/TermsAndConditions";
 import ContactUs from "./components/contactUs";
-
+import { TermsAndConditions } from "./components/TermsAndConditions";
 const App = () => {
   const [user, setUser] = useState(true);
   // console.log("Environment Variables:", import.meta.env);
