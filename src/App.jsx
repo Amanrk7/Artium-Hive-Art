@@ -20,9 +20,9 @@ import { AuthProvider } from "./GlobalContext/AuthContext";
 import { PrivacyPolicy } from "./components/privacyPolicy";
 import { RefundPolicy } from "./components/refundPolicy";
 import ContactUs from "./components/contactUs";
-import { TermsAndConditions } from "./components/TermsAndConditions";
+import { ConditionsTermsPage } from "./components/tNc";
 const App = () => {
-  const [user, setUser] = useState(true);  
+  const [user, setUser] = useState(true);
   // console.log("Environment Variables:", import.meta.env);
 
   useEffect(() => {
@@ -64,10 +64,11 @@ const App = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/logIn" element={<SignIn />} />
-          <Route path="/termsAndCondition" element={<TermsAndConditions />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/refundPolicy" element={<RefundPolicy />} />
           <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/termsAndCondition" element={<ConditionsTermsPage />} />
+
           {/* <Route path="/art/:slug" element={<ArtDetails />} />
           <Route path="/userLogin" element={<SignIn />} />*/}
         </Routes>

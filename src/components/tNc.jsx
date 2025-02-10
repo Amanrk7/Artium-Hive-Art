@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function TermsAndConditions() {
+export function ConditionsTermsPage() {
   const [openSections, setOpenSections] = useState({});
 
   const toggleSection = (sectionId) => {
@@ -1077,7 +1077,7 @@ export function TermsAndConditions() {
               For any questions, concerns, or support inquiries regarding these
               Terms & Conditions, Users may contact Maya Incorporation
               (operating as ArtiumHive) through the following official channels:
-              <li>📧 Email: contact@artiumhive.art</li>  
+              <li>📧 Email: contact@artiumhive.art</li>
               <li>🌍 Website: https://artiumhive.art</li>
             </p>
             <p>

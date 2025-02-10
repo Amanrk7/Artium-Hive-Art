@@ -1908,7 +1908,7 @@ small {
     align-content: center;
     width: 100%;
     justify-self: center;
-    padding: 61px;
+    padding: 37px;
     text-align: justify;
   }
 
@@ -4345,4 +4345,20 @@ blockquote::after {
 
 .terms-and-conditions {
   text-align: center;
+}
+
+.cmqFHy{
+  animation: contactUsAnim 0.9s ease;
+}
+
+@keyframes contactUsAnim {
+  from {
+    margin-top: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 155px;
+    
+    opacity: 1;
+  }
 }
