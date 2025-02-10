@@ -51,7 +51,12 @@ export function Footer() {
         <div id="footer_child1_parent">
           <div className="footer-child1">
             <div
-              style={{ width: "100%", display: "flex", justifyContent: "end" }}
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "end",
+                alignItems: "center",
+              }}
             >
               <div style={{ fontFamily: "BOLDE" }}>
                 © 2025 Artium Hive. All rights reserved.
