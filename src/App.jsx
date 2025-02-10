@@ -17,6 +17,10 @@ import "./css/fanta.css";
 // import LoginForm from "./components/LoginForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./GlobalContext/AuthContext";
+import { PrivacyPolicy } from "./components/privacyPolicy";
+import { RefundPolicy } from "./components/refundPolicy";
+import { TermsAndConditions } from "./components/TermsAndConditions";
+import ContactUs from "./components/contactUs";
 
 const App = () => {
   const [user, setUser] = useState(true);
@@ -61,7 +65,10 @@ const App = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/logIn" element={<SignIn />} />
-
+          <Route path="/termsAndCondition" element={<TermsAndConditions />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/refundPolicy" element={<RefundPolicy />} />
+          <Route path="/contactUs" element={<ContactUs />} />
           {/* <Route path="/art/:slug" element={<ArtDetails />} />
           <Route path="/userLogin" element={<SignIn />} />*/}
         </Routes>

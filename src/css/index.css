@@ -1191,6 +1191,36 @@ small {
   letter-spacing: 1.5px;
   font-size: 18px;
 }
+.terms-and-conditions .section h2 {
+  color: white;
+  font-family: "BOLDE";
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.terms-and-conditions .section div p,
+.terms-and-conditions .section div ul li,
+.terms-and-conditions .section div h3,
+.terms-and-conditions .section div p li {
+  color: #ebebeb;
+  font-family: "Tanseek Modern Pro Arabic Book";
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.terms-and-conditions {
+  margin-top: 145px;
+  /* background: aqua; */
+  color: white;
+  justify-content: center;
+  /* justify-items: center; */
+  align-items: center;
+  align-content: center;
+  width: 70%;
+  justify-self: center;
+  padding: 61px;
+  text-align: justify;
+}
 /* ---------media-queries---------------------------------------------------- */
 
 /* ------------------1 for phones, less than or =425px---------------- */
@@ -1850,6 +1880,41 @@ small {
     padding: 8px;
     height: 26px;
   }
+
+  .terms-and-conditions .section h2 {
+    color: white;
+    font-family: "BOLDE";
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .terms-and-conditions .section div p,
+  .terms-and-conditions .section div ul li,
+  .terms-and-conditions .section div h3,
+  .terms-and-conditions .section div p li {
+    color: #ebebeb;
+    font-family: "Tanseek Modern Pro Arabic Book";
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+  .terms-and-conditions {
+    margin-top: 145px;
+    /* background: aqua; */
+    color: white;
+    justify-content: center;
+    /* justify-items: center; */
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    justify-self: center;
+    padding: 61px;
+    text-align: justify;
+  }
+
+  #headerTag:first-child div a {
+    font-size: 14px;
+  }
 }
 
 /* ------------------1 for tablets, > 425px and < 768px---------------- */
@@ -2416,6 +2481,37 @@ small {
   }
   .moto_contents {
     text-align: left;
+  }
+
+  .terms-and-conditions .section h2 {
+    color: white;
+    font-family: "BOLDE";
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .terms-and-conditions .section div p,
+  .terms-and-conditions .section div ul li,
+  .terms-and-conditions .section div h3,
+  .terms-and-conditions .section div p li {
+    color: #ebebeb;
+    font-family: "Tanseek Modern Pro Arabic Book";
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+  .terms-and-conditions {
+    margin-top: 145px;
+    /* background: aqua; */
+    color: white;
+    justify-content: center;
+    /* justify-items: center; */
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    justify-self: center;
+    padding: 61px;
+    text-align: justify;
   }
 }
 
@@ -4236,4 +4332,17 @@ blockquote::after {
 #nature_collection,
 #art_collection {
   width: 100%;
+}
+
+.terms-and-conditions h1 {
+  font-family: "Phonk Contrast DEMO";
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  font-family: "Phonk Contrast DEMO";
+}
+
+.terms-and-conditions {
+  text-align: center;
 }

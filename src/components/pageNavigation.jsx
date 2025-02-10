@@ -95,6 +95,9 @@ export const PageNavigation = () => {
               <Link to="about" className="text-xl font-semibold">
                 About Us
               </Link>
+              <Link to="contactUs" className="text-xl font-semibold">
+              Contact Us
+            </Link>
               {/* </button> */}
             </nav>
           </div>
@@ -188,6 +191,9 @@ export const PageNavigation = () => {
             {/* <button id="create"> */}
             <Link to="about" className="text-xl font-semibold">
               About Us
+            </Link>
+            <Link to="contactUs" className="text-xl font-semibold">
+              Contact Us
             </Link>
             {/* </button> */}
           </nav>
