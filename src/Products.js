@@ -90,7 +90,8 @@ export const products = [
     id: 1,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd1,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -100,7 +101,8 @@ export const products = [
     id: 2,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd2,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -110,7 +112,8 @@ export const products = [
     id: 3,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd3,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -121,7 +124,8 @@ export const products = [
     id: 4,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd5,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -132,7 +136,8 @@ export const products = [
     id: 5,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd7,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -143,7 +148,8 @@ export const products = [
     id: 6,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd9,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -154,7 +160,8 @@ export const products = [
     id: 7,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd17,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -165,7 +172,8 @@ export const products = [
     id: 8,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd21,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -175,7 +183,8 @@ export const products = [
     id: 9,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd22,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -185,7 +194,8 @@ export const products = [
     id: 10,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd23,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -195,7 +205,8 @@ export const products = [
     id: 11,
     // name: "Mother Dairy Toned Milk",
     name: "Art Piece",
-    price: 28,
+    // price: 28,
+    price: "1 k",
     image: pd24,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -205,7 +216,8 @@ export const products = [
     id: 12,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd25,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -215,7 +227,8 @@ export const products = [
     id: 13,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd26,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -226,7 +239,8 @@ export const products = [
     id: 14,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd28,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -237,7 +251,8 @@ export const products = [
     id: 15,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd30,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -247,7 +262,8 @@ export const products = [
     id: 16,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd31,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -257,7 +273,8 @@ export const products = [
     id: 17,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd32,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -267,7 +284,8 @@ export const products = [
     id: 18,
     // name: "Mother Dairy Toned Milk",
     name: "Art Piece",
-    price: 28,
+    // price: 28,
+    price: "1 k",
     image: pd33,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -278,7 +296,8 @@ export const products = [
     id: 19,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd36,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -288,7 +307,8 @@ export const products = [
     id: 20,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd37,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -298,7 +318,8 @@ export const products = [
     id: 21,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd38,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -308,7 +329,8 @@ export const products = [
     id: 22,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd39,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -318,7 +340,8 @@ export const products = [
     id: 23,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd40,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -328,7 +351,8 @@ export const products = [
     id: 24,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd41,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -339,7 +363,8 @@ export const products = [
     id: 25,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd43,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -349,7 +374,8 @@ export const products = [
     id: 26,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd44,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -359,7 +385,8 @@ export const products = [
     id: 27,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd45,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -370,7 +397,8 @@ export const products = [
     id: 28,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd49,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -380,7 +408,8 @@ export const products = [
     id: 29,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd50,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -390,7 +419,8 @@ export const products = [
     id: 30,
     // name: "Mother Dairy Toned Milk",
     name: "Art Piece",
-    price: 28,
+    // price: 28,
+    price: "1 k",
     image: pd51,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -400,7 +430,8 @@ export const products = [
     id: 31,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd52,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -410,7 +441,8 @@ export const products = [
     id: 32,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd53,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -420,7 +452,8 @@ export const products = [
     id: 33,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd54,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -430,7 +463,8 @@ export const products = [
     id: 34,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd55,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -440,7 +474,8 @@ export const products = [
     id: 35,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd56,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -450,7 +485,8 @@ export const products = [
     id: 36,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd57,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -460,7 +496,8 @@ export const products = [
     id: 37,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd58,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -470,7 +507,8 @@ export const products = [
     id: 38,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd59,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -480,7 +518,8 @@ export const products = [
     id: 39,
     // name: "Mother Dairy Toned Milk",
     name: "Art Piece",
-    price: 28,
+    // price: 28,
+    price: "1 k",
     image: pd60,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -491,7 +530,8 @@ export const products = [
     id: 40,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd62,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -501,7 +541,8 @@ export const products = [
     id: 41,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd63,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -511,7 +552,8 @@ export const products = [
     id: 42,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd64,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -521,7 +563,8 @@ export const products = [
     id: 43,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd65,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -532,7 +575,8 @@ export const products = [
     id: 44,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd67,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -542,7 +586,8 @@ export const products = [
     id: 45,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd68,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -552,7 +597,8 @@ export const products = [
     id: 46,
     // name: "Mother Dairy Toned Milk",
     name: "Art Piece",
-    price: 28,
+    // price: 28,
+    price: "1 k",
     image: pd69,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -562,7 +608,8 @@ export const products = [
     id: 47,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd70,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -572,7 +619,8 @@ export const products = [
     id: 48,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd71,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -582,7 +630,8 @@ export const products = [
     id: 49,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd72,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -593,7 +642,8 @@ export const products = [
     id: 50,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd74,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -603,7 +653,8 @@ export const products = [
     id: 51,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd75,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -613,7 +664,8 @@ export const products = [
     id: 52,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd76,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -623,7 +675,8 @@ export const products = [
     id: 53,
     // name: "France colony",
     name: "Art Piece",
-    price: 29,
+    // price: 29,
+    price: "1 k",
     image: pd77,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -633,7 +686,8 @@ export const products = [
     id: 54,
     // name: "Mother Dairy Toned Milk",
     name: "Art Piece",
-    price: 28,
+    // price: 28,
+    price: "1 k",
     image: pd78,
     description:
       "A perfect blend of good health and wholesome taste, Mother Dairy Toned Milk (Polypack) is an ideal choice for people who want nutritionally balanced diet to stay fit. Healthy and nutritious, this low-fat milk can be used in making beverages and milkshakes.",
@@ -643,7 +697,8 @@ export const products = [
     id: 55,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd79,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -653,7 +708,8 @@ export const products = [
     id: 56,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd80,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -663,7 +719,8 @@ export const products = [
     id: 57,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd81,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -673,7 +730,8 @@ export const products = [
     id: 58,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd82,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -683,7 +741,8 @@ export const products = [
     id: 59,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd83,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -696,7 +755,8 @@ export const products_hinduism = [
     id: 1,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd73,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -706,7 +766,8 @@ export const products_hinduism = [
     id: 2,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd66,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -716,7 +777,8 @@ export const products_hinduism = [
     id: 3,
     // name: "Amul Gold Full Cream Fresh Milk",
     name: "Art Piece",
-    price: 34,
+    // price: 34,
+    price: "1 k",
     image: pd61,
     description:
       "Amul Gold Full Cream Milk (Polypack) Milk is homogenized toned pasteurized milk. Rich and creamy, this milk is an excellent source of vitamin A and vitamin D that enhances growth and development of the body tissues and the brain.",
@@ -726,7 +788,8 @@ export const products_hinduism = [
     id: 4,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd10,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -736,7 +799,8 @@ export const products_hinduism = [
     id: 5,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd11,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -746,7 +810,8 @@ export const products_hinduism = [
     id: 6,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd12,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -756,7 +821,8 @@ export const products_hinduism = [
     id: 7,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd8,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -766,7 +832,8 @@ export const products_hinduism = [
     id: 8,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd4,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -779,7 +846,8 @@ export const products_nature = [
     id: 1,
     // name: "Amul Salted Butter",
     name: "Art Piece",
-    price: 60,
+    // price: 60,
+    price: "1 k",
     image: pd6,
     description:
       "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty. This finely processed butter is natural, pure and tastes best with toasts and sandwiches. Has a natural and pure formulation that gives a great taste. Made from fresh cream that has a delicious flavour. Spread it over toast or cook your curries in it for a heavenly taste.",
@@ -789,7 +857,8 @@ export const products_nature = [
     id: 2,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd13,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -799,7 +868,8 @@ export const products_nature = [
     id: 3,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd14,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -810,7 +880,8 @@ export const products_nature = [
     id: 5,
     // name: "Amul Taaza Toned Fresh Milk",
     name: "Art Piece",
-    price: 56,
+    // price: 56,
+    price: "1 k",
     image: pd16,
     description:
       "Amul Taaza Toned Milk (Polypack) is pasteurized with a great nutritional value. It can be consumed directly or can be used for preparing tea, coffee, sweets, khoya, curd, buttermilk, ghee etc.",
@@ -820,7 +891,8 @@ export const products_nature = [
     id: 6,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd18,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -830,7 +902,8 @@ export const products_nature = [
     id: 7,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd19,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -840,7 +913,8 @@ export const products_nature = [
     id: 8,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd20,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -850,7 +924,8 @@ export const products_nature = [
     id: 9,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd27,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -860,7 +935,8 @@ export const products_nature = [
     id: 10,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd29,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -870,7 +946,8 @@ export const products_nature = [
     id: 11,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd34,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -880,7 +957,8 @@ export const products_nature = [
     id: 12,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd35,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -890,7 +968,8 @@ export const products_nature = [
     id: 13,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd42,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -900,7 +979,8 @@ export const products_nature = [
     id: 14,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd46,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -910,7 +990,8 @@ export const products_nature = [
     id: 15,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd47,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -920,7 +1001,8 @@ export const products_nature = [
     id: 16,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd48,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -930,7 +1012,8 @@ export const products_nature = [
     id: 17,
     // name: "Kraft Parmesan Grated Cheese",
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd84,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",
@@ -939,7 +1022,8 @@ export const products_nature = [
   {
     id: 18,
     name: "Art Piece",
-    price: 35,
+    // price: 35,
+    price: "1 k",
     image: pd85,
     description:
       "Kraft Grated Parmesan Cheese enhances your pastas, pizzas, seafood, salads and more with the bold taste of Kraft grated cheese. The sharp and tangy flavor complements your favorite recipes, and its pre-grated to save you valuable prep time in the kitchen. This cheese is sure to add great nutty and salty flavor to your favorite meals at any occasion. Sprinkle this Parmesan cheese over pasta dishes or add it your signature chicken Parmesan recipe for extra flavor.",

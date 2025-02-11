@@ -50,78 +50,20 @@ export function Footer() {
 
         <div id="footer_child1_parent">
           <div className="footer-child1">
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "end",
-                alignItems: "center",
-              }}
-            >
+            <div id="imp_page_parent">
               <div style={{ fontFamily: "BOLDE" }}>
                 © 2025 Artium Hive. All rights reserved.
               </div>
-              <div>
-                <ul style={{ display: "flex", gap: "11px" }}>
-                  <li
-                    style={{
-                      listStyle: "none",
-                      color: "black",
-                      textDecoration: "none",
-                    }}
-                  >
-                    <Link
-                      to="/termsAndCondition"
-                      style={{
-                        color: "black",
-                        textDecoration: "none",
-                        fontFamily: "Tanseek Modern Pro Arabic Book",
-                        fontSize: " 15px",
-                        letterSpacing: "1.5px",
-                      }}
-                    >
-                      Terms And Conditions
-                    </Link>
+              <div id="imp_pages_footer">
+                <ul>
+                  <li>
+                    <Link to="/termsAndCondition">Terms And Conditions</Link>
                   </li>
-                  <li
-                    style={{
-                      listStyle: "none",
-                      color: "black",
-                      textDecoration: "none",
-                    }}
-                  >
-                    <Link
-                      to="/privacyPolicy"
-                      style={{
-                        color: "black",
-                        textDecoration: "none",
-                        fontFamily: "Tanseek Modern Pro Arabic Book",
-                        fontSize: " 15px",
-                        letterSpacing: "1.5px",
-                      }}
-                    >
-                      Privacy Policy
-                    </Link>
+                  <li>
+                    <Link to="/privacyPolicy">Privacy Policy</Link>
                   </li>
-                  <li
-                    style={{
-                      listStyle: "none",
-                      color: "black",
-                      textDecoration: "none",
-                    }}
-                  >
-                    <Link
-                      to="/refundPolicy"
-                      style={{
-                        color: "black",
-                        textDecoration: "none",
-                        fontFamily: "Tanseek Modern Pro Arabic Book",
-                        fontSize: " 15px",
-                        letterSpacing: "1.5px",
-                      }}
-                    >
-                      Refund Policy
-                    </Link>
+                  <li>
+                    <Link to="/refundPolicy">Refund Policy</Link>
                   </li>
                 </ul>
               </div>

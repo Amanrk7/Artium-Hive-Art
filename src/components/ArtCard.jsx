@@ -215,7 +215,7 @@ const ArtCard = ({ data }) => {
         <div>
           <h3>{name}</h3>
         </div>
-        <div>current price: {price}$</div>
+        <div>$ {price}</div>
         {/* <div>
           <p>About this piece: {description}</p>
         </div> */}
