@@ -1,7 +1,7 @@
 # Artium Hive
  
 ## Our Motto
-### >Where Art Sparks Connections
+### Where Art Sparks Connections
 ### passion meets pixels & creativity finds direction
 ### a hive of dreams, a shared collection
 ### Discover Create Inspire
