@@ -20,8 +20,8 @@ export function Footer() {
               gap: "5px",
             }}
           >
-            <div>
-              <i id="telegram" className="fa-brands fa-telegram"></i>
+            <div style={{ backgroundColor: "#8a4d6a", color: "white" }}>
+              <i id="telegram" className="fa-brands fa-telegram" ></i>
             </div>
             <div className="instagram-icon">
               <a
@@ -32,7 +32,7 @@ export function Footer() {
                 <i id="instagram" className="fa-brands fa-instagram"></i>{" "}
               </a>
             </div>
-            <div>
+            <div className="x_class">
               <a
                 href="https://x.com/ArtiumHive?t=ZqhhacLJ8laU3w9hJtDWfQ&s=08"
                 target="_blank"
@@ -51,7 +51,13 @@ export function Footer() {
         <div id="footer_child1_parent">
           <div className="footer-child1">
             <div id="imp_page_parent">
-              <div style={{ fontFamily: "BOLDE" }}>
+              <div
+                style={{
+                  fontFamily: "BOLDE",
+                  backgroundColor: "#8a4d6a",
+                  color: "white",
+                }}
+              >
                 © 2025 Artium Hive. All rights reserved.
               </div>
               <div id="imp_pages_footer">

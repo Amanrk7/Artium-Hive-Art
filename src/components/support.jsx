@@ -15,16 +15,13 @@ const styles = {
   },
   heading: {
     fontSize: "2.5rem",
-    // color: "#333",
-    color: "rgb(255 255 255)",
+    color: " var(--primary)",
     marginBottom: "10px",
     fontFamily: "'Phonk Contrast DEMO'",
   },
   text: {
     fontSize: "1.3rem",
-    // color: "#666",
-    color: "rgb(255 255 255)",
-
+    color: " var(--text)",
     marginBottom: "20px",
     fontFamily: "'BOLDE'",
     letterSpacing: "1.5px",
@@ -43,8 +40,8 @@ const styles = {
     fontFamily: "'BOLDE'",
     letterSpacing: "1px",
     ":hover": {
-      backgroundColor: "#ffcc00", // Darker yellow on hover
-      transform: "scale(1.05)", // Slightly scale up
+      backgroundColor: "#ffcc00",
+      transform: "scale(1.05)",
     },
   },
 };
@@ -63,7 +60,10 @@ export const SupportPage = () => {
         If you enjoy our work, consider buying us a coffee to keep us going!
       </p>
       <button id="support_btn" style={styles.button} onClick={handleBuyCoffee}>
-        <FontAwesomeIcon icon={faCoffee} style={{ marginRight: "10px" }} />
+        <FontAwesomeIcon
+          icon={faCoffee}
+          style={{ marginRight: "10px", background: "none" }}
+        />
         Buy Us a Coffee
       </button>
     </div>

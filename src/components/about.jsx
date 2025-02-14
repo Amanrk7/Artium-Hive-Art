@@ -23,7 +23,7 @@ export const AboutPage = () => {
           <p>
             {" "}
             <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
-            "At ArtiumHive, we believe that art is a universal language that
+            At ArtiumHive, we believe that art is a universal language that
             transcends boundaries and connects souls. Our mission is to create a
             vibrant platform where passion meets pixels, and creativity finds
             its true direction. We are dedicated to supporting local artists
@@ -33,7 +33,7 @@ export const AboutPage = () => {
             art accessible to all and inspire connections that celebrate the
             beauty of human expression. Join us in this journey to discover,
             create, and inspire. Together, let's build a hive of dreams and a
-            shared collection that resonates with art lovers everywhere".
+            shared collection that resonates with art lovers everywhere.
           </p>
         </div>
       </div>

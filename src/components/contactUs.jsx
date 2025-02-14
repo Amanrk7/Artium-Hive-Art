@@ -10,6 +10,17 @@ const ContactPageContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-top: 155px;
+  animation: contactus_anim 0.7s ease forwards;
+  @keyframes contactus_anim {
+    0% {
+      opacity: 0;
+      margin-top: 500px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 155px;
+    }
+  }
 `;
 
 const Title = styled.h1`
@@ -21,6 +32,8 @@ const Title = styled.h1`
   color: rgb(0 0 0);
   margin-bottom: 10px;
   font-family: "Phonk Contrast DEMO";
+  color: var(--primary);
+  justify-self: center;
 `;
 
 const Subtitle = styled.p`
@@ -30,6 +43,7 @@ const Subtitle = styled.p`
   margin-bottom: 40px;
   font-family: "BOLDE";
   letter-spacing: 1.5px;
+  color: var(--text);
 `;
 
 const ContactGrid = styled.div`
@@ -55,9 +69,14 @@ const Input = styled.input`
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
-
+  background: var(--accent);
+  font-family: "Tanseek Modern Pro Arabic Book";
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--text);
   &:focus {
-    border-color: #3498db;
+    border-color: var(--secondary);
   }
 `;
 
@@ -70,22 +89,30 @@ const TextArea = styled.textarea`
   resize: vertical;
   outline: none;
   transition: border-color 0.3s ease;
-
+  background: var(--accent);
+  font-family: "Tanseek Modern Pro Arabic Book";
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--text);
   &:focus {
-    border-color: #3498db;
+    border-color: var(--secondary);
   }
 `;
 
 const SubmitButton = styled.button`
   padding: 12px;
-  background: #3498db;
+  background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
-
+  font-family: "Tanseek Modern Pro Arabic Book";
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
   &:hover {
     background: #2980b9;
   }
@@ -102,30 +129,37 @@ const InfoTitle = styled.h3`
   font-size: 1.5rem;
   color: #2c3e50;
   margin-bottom: 20px;
-      font-family: 'Phonk Contrast DEMO';
-    font-size: 1.2rem;
-}
+  font-family: "Phonk Contrast DEMO";
+  font-size: 1.2rem;
+  color: var(--primary);
+  background: none;
 `;
 
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  background: none;
 `;
 
 const Icon = styled.span`
   font-size: 1.5rem;
   color: #3498db;
   margin-right: 15px;
+  background: none;
 `;
 
 const InfoText = styled.p`
   font-size: 1rem;
-  color: #555;
+  color: var(--text);
   margin: 0;
   font-family: "Tanseek Modern Pro Arabic Book";
   font-size: 15px;
   letter-spacing: 1px;
+  background: none;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
 `;
 
 const MapContainer = styled.div`
@@ -166,18 +200,6 @@ const ContactUs = () => {
         {/* Contact Information */}
         <ContactInfo>
           <InfoTitle>Connect With Us</InfoTitle>
-          {/* <InfoItem>
-            <Icon>📍</Icon>
-            <InfoText>
-              MAYA INCOPRATION, HNO. 303 GANESH GALAXY CITY BUILDING AYODHYA
-              BYPASS ROAD BHOPAL <br />
-              India, 462041  Dist-BHOPAL
-            </InfoText>
-          </InfoItem> */}
-          {/* <InfoItem>
-            <Icon>📞</Icon>
-            <InfoText>+91 9990253738</InfoText>
-          </InfoItem> */}
           <InfoItem>
             <Icon>📧</Icon>
             <InfoText>contact@artiumhive.art</InfoText>
@@ -185,8 +207,7 @@ const ContactUs = () => {
           <div
             style={{
               display: "flex",
-            //   justifyContent: "center",
-            //   justifyItems: "center",
+              background: "none",
             }}
           >
             <InfoItem>
@@ -201,35 +222,30 @@ const ContactUs = () => {
                   </a>
                 </div>
               </Icon>
-              {/* <InfoText>contact@artiumhive.art</InfoText> */}
             </InfoItem>
             <InfoItem>
               <Icon>
-                <div>
+                <div
+                  style={{
+                    background: "none",
+                  }}
+                >
                   <a
                     href="https://x.com/ArtiumHive?t=ZqhhacLJ8laU3w9hJtDWfQ&s=08"
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{
+                      background: "none",
+                    }}
                   >
                     <i id="x" className="fa-brands fa-x-twitter"></i>{" "}
                   </a>
                 </div>
               </Icon>
-              {/* <InfoText>contact@artiumhive.art</InfoText> */}
             </InfoItem>
           </div>
         </ContactInfo>
       </ContactGrid>
-
-      {/* Embedded Map */}
-      {/* <MapContainer>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715317365928!2d72.83260931538497!3d19.04198825790038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8f6f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2sCreative%20City!5e0!3m2!1sen!2sin!4v1631234567890!5m2!1sen!2sin"
-          title="ArtiumHive Location"
-          allowFullScreen
-          loading="lazy"
-        />
-      </MapContainer> */}
     </ContactPageContainer>
   );
 };

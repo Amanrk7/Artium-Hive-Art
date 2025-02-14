@@ -1,11 +1,7 @@
-// src/components/SignIn.jsx
 import React, { useState, useContext } from "react";
-import { auth, signInWithEmailAndPassword } from "../firebase/firebase"; // Correct import
+import { auth, signInWithEmailAndPassword } from "../firebase/firebase";
 import artiumhiveLogo from "../assets/images/artiumhiveLogo.png";
-import axios from "axios"; // Optional for backend API calls
-import { Footer } from "./Footer";
 import { AuthContext } from "../GlobalContext/AuthContext";
-import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const SignIn = ({ onClose }) => {
@@ -26,11 +22,10 @@ const SignIn = ({ onClose }) => {
 
   // Handle sign-in
   const handleSignIn = async () => {
-    setError(""); // Clear previous errors
-    setErrorEmail(""); // Clear email error
-    setErrorPassword(""); // Clear password error
+    setError("");
+    setErrorEmail("");
+    setErrorPassword("");
 
-    // Basic validation
     if (!email) {
       setErrorEmail("Email is required!");
       return;
@@ -41,7 +36,7 @@ const SignIn = ({ onClose }) => {
     }
 
     try {
-      // Sign in with Firebase Authentication
+      // Firebase Authentication
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
@@ -52,19 +47,8 @@ const SignIn = ({ onClose }) => {
       // console.log("User signed in:", user);
       setIsLoggedIn(true);
       alert("logged in successfully!!");
-
-      // Optional: Use Axios to call a backend API after successful sign-in
-      // const response = await axios.post("https://your-backend-api.com/login", {
-      //   uid: user.uid,
-      //   email: user.email,
-      // });
-      // console.log("Backend response:", response.data);
-
-      // Redirect or perform other actions after successful sign-in
-      // Example: Redirect to the home page
-      // history.push("/"); // If using React Router
     } catch (error) {
-      setError("Invalid email or password!"); // Display error message
+      setError("Invalid email or password!");
       console.error("Error signing in:", error.message);
     }
   };
@@ -103,7 +87,6 @@ const SignIn = ({ onClose }) => {
                     className="logo-login-grand-parent"
                     style={{
                       display: "flex",
-
                       alignItems: "center",
                     }}
                   >
@@ -111,6 +94,8 @@ const SignIn = ({ onClose }) => {
                       style={{
                         width: "100%",
                         fontFamily: "Phonk Contrast DEMO",
+                        background: "none",
+                        color: "var(--primary)",
                       }}
                     >
                       Log into Artium Hive
@@ -122,11 +107,7 @@ const SignIn = ({ onClose }) => {
                         background: "none",
                         border: "none",
                         padding: "0",
-                        // position: "absolute",
-                        // zIndex: "1000",
                         boxShadow: "none",
-                        // top: "27.6%",
-                        // left: "81%",
                       }}
                     >
                       <i
@@ -160,14 +141,15 @@ const SignIn = ({ onClose }) => {
                           height: "3em",
                           background: "rgb(255 255 255 / 0%)",
                           border: "0",
-                          color: "#615e5e",
                           fontWeight: "900",
-                          fontFamily: "circular",
-                          letterSpacing: " .3px",
                           borderTop: "none",
                           borderLeft: "none",
                           borderRight: "none",
                           width: "90%",
+                          fontSize: "19px",
+                          letterSpacing: "1.7px",
+                          fontFamily: "Tanseek Modern Pro Arabic Book",
+                          color: "var(--text)",
                         }}
                       />
                       {errorEmail && (
@@ -212,14 +194,15 @@ const SignIn = ({ onClose }) => {
                           height: "3em",
                           background: "rgb(255 255 255 / 0%)",
                           border: "0",
-                          color: "#615e5e",
                           fontWeight: "900",
-                          fontFamily: "circular",
-                          letterSpacing: " .3px",
                           borderTop: "none",
                           borderLeft: "none",
                           borderRight: "none",
                           width: "90%",
+                          fontSize: "19px",
+                          letterSpacing: "1.7px",
+                          fontFamily: "Tanseek Modern Pro Arabic Book",
+                          color: "var(--text)",
                         }}
                         aria-describedby="passwordError"
                       />
@@ -291,13 +274,7 @@ const SignIn = ({ onClose }) => {
               {/* --------right side---------- */}
               <div id="loginPageImg-Ins">
                 <div id="login-page-img-instructions">
-                  {/* <div id="logo-img-signin" style={{ width: "100%" }}>
-                <Link to="/" className="text-xl font-semibold">
-                  <img id="logo-img" src={artiumhiveLogo} alt="logo" />
-                </Link>
-              </div> */}
-
-                  <div>
+                  <div style={{ background: "none" }}>
                     <h3
                       id="signinDiv-h3"
                       style={{ fontFamily: "'Phonk Contrast DEMO'" }}
@@ -306,7 +283,7 @@ const SignIn = ({ onClose }) => {
                     </h3>
                   </div>
 
-                  <div>
+                  <div style={{ background: "none" }}>
                     <h3
                       id="signinDiv-h3"
                       style={{ fontFamily: "'Phonk Contrast DEMO'" }}
@@ -317,14 +294,17 @@ const SignIn = ({ onClose }) => {
                 </div>
               </div>
             </div>
-
-            {/* <Footer id=" footer-signIn-Page" /> */}
           </div>
           {/* -------------for moblie hidden---------------- */}
           <div id="login-mobile-signin-hidden">
             <div className="login-nav-hidden">
               <div
-                style={{ height: "23px", width: "50%", marginLeft: "-65px" }}
+                style={{
+                  height: "23px",
+                  width: "50%",
+                  marginLeft: "-65px",
+                  background: "none",
+                }}
               >
                 <img
                   src={artiumhiveLogo}
@@ -333,6 +313,7 @@ const SignIn = ({ onClose }) => {
                     width: "100%",
                     height: "100%",
                     objectFit: "contain",
+                    background: "none",
                   }}
                 />
               </div>
@@ -348,6 +329,7 @@ const SignIn = ({ onClose }) => {
                   style={{
                     fontFamily: "BOLDE",
                     letterSpacing: "2px",
+                    background: "none",
                   }}
                 >
                   fill
@@ -372,7 +354,7 @@ const SignIn = ({ onClose }) => {
                         fontFamily: "Phonk Contrast DEMO",
                       }}
                     >
-                      Log into Artium Hive
+                      Log in
                     </div>
                     <button
                       id="go_back_from_login"
@@ -381,11 +363,7 @@ const SignIn = ({ onClose }) => {
                         background: "none",
                         border: "none",
                         padding: "0",
-                        // position: "absolute",
-                        // zIndex: "1000",
                         boxShadow: "none",
-                        // top: "27.6%",
-                        // left: "81%",
                       }}
                     >
                       <i
@@ -419,16 +397,15 @@ const SignIn = ({ onClose }) => {
                           height: "3em",
                           background: "rgb(255 255 255 / 0%)",
                           border: "0",
-                          // color: "#615e5e",
                           fontWeight: "900",
-                          fontFamily: "circular",
-                          // letterSpacing: " .3px",
                           borderTop: "none",
                           borderLeft: "none",
                           borderRight: "none",
                           width: "90%",
-                          letterSpacing: "1px",
-                          color: "black",
+                          fontSize: "19px",
+                          letterSpacing: "1.7px",
+                          fontFamily: "Tanseek Modern Pro Arabic Book",
+                          color: "var(--text)",
                         }}
                       />
                       {errorEmail && (
@@ -438,6 +415,7 @@ const SignIn = ({ onClose }) => {
                             fontFamily: "circular",
                             transition: ".9s ease-in-out",
                             fontSize: "11px",
+                            background: "none",
                           }}
                         >
                           <i
@@ -446,6 +424,7 @@ const SignIn = ({ onClose }) => {
                               color: "rgb(223, 77, 77)",
                               fontSize: "11px",
                               marginRight: "3px",
+                              background: "none",
                             }}
                           ></i>
                           {errorEmail}
@@ -473,20 +452,23 @@ const SignIn = ({ onClose }) => {
                           height: "3em",
                           background: "rgb(255 255 255 / 0%)",
                           border: "0",
-                          // color: "#615e5e",
                           fontWeight: "900",
-                          fontFamily: "circular",
-                          // letterSpacing: " .3px",
                           borderTop: "none",
                           borderLeft: "none",
                           borderRight: "none",
                           width: "90%",
-                          letterSpacing: "1px",
-                          color: "black",
+                          fontSize: "19px",
+                          letterSpacing: "1.7px",
+                          fontFamily: "Tanseek Modern Pro Arabic Book",
+                          color: "var(--text)",
                         }}
                         aria-describedby="passwordError"
                       />
-                      <span>
+                      <span
+                        style={{
+                          background: "none",
+                        }}
+                      >
                         <i
                           className={
                             isVisible
@@ -494,7 +476,8 @@ const SignIn = ({ onClose }) => {
                               : "fa-regular fa-eye-slash"
                           }
                           style={{
-                            color: "white",
+                            // color: "white",
+                            background: "none",
                             width: "10%",
                             cursor: "pointer",
                           }}
@@ -508,6 +491,7 @@ const SignIn = ({ onClose }) => {
                             fontFamily: "circular",
                             transition: ".9s ease-in-out",
                             fontSize: "11px",
+                            background: "none",
                           }}
                         >
                           <i
@@ -516,6 +500,7 @@ const SignIn = ({ onClose }) => {
                               color: "rgb(223, 77, 77)",
                               fontSize: "11px",
                               marginRight: "3px",
+                              background: "none",
                             }}
                           ></i>
                           {errorPassword}
@@ -528,11 +513,8 @@ const SignIn = ({ onClose }) => {
                         onClick={handleSignIn}
                         style={{
                           width: "100%",
-                          padding: "17px",
                           fontFamily: "bolde",
-                          backgroundColor: "#000000",
                           boxShadow: "none",
-                          fontSize: "13px",
                           borderBottom: "24px",
                         }}
                       >
@@ -545,6 +527,7 @@ const SignIn = ({ onClose }) => {
                             fontFamily: "circular",
                             transition: ".9s ease-in-out",
                             fontSize: "11px",
+                            background: "none",
                           }}
                         >
                           <i
@@ -553,6 +536,7 @@ const SignIn = ({ onClose }) => {
                               color: "rgb(223, 77, 77)",
                               fontSize: "11px",
                               marginRight: "3px",
+                              background: "none",
                             }}
                           ></i>
                           {error}
@@ -563,7 +547,6 @@ const SignIn = ({ onClose }) => {
                 </div>
               </div>
             </div>
-            {/* <Footer id=" footer-signIn-Page" /> */}
           </div>
         </>
       )}

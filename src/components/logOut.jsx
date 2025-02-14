@@ -40,7 +40,7 @@ export const LogOut = () => {
         <button id="log-out-button" onClick={() => setShowSignIn(true)}>
           <i
             className="fa-solid fa-right-to-bracket"
-            style={{ color: "black" }}
+            // style={{ color: "black" }}
           ></i>
         </button>
       )}

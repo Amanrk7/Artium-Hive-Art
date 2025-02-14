@@ -108,7 +108,7 @@ export const PageNavigation = () => {
               <button id="cart" onClick={handleToggleMenu}>
                 <i
                   className="fa-solid fa-bars"
-                  style={{ color: "#000000" }}
+                  // style={{ color: "#000000" }}
                 ></i>
               </button>
             )}
@@ -133,7 +133,7 @@ export const PageNavigation = () => {
                 <button id="cart" onClick={handleCloseMenu}>
                   <i
                     className="fa-solid fa-circle-xmark"
-                    style={{ color: "#000000" }}
+                    // style={{ color: "#000000" }}
                   ></i>
                 </button>
               </>

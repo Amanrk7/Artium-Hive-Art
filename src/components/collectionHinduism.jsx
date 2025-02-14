@@ -3,12 +3,12 @@ import ArtCard from "./ArtCard";
 
 export function CollectionHinduism({ data }) {
   return (
-    <>
+    <div className="masonry-grid">
       {data.map((item, index) => (
-        <div id="main1">
-          <ArtCard key={index} data={item} />
+        <div key={index} className="masonry-item">
+          <ArtCard data={item} />
         </div>
       ))}
-    </>
+    </div>
   );
 }
