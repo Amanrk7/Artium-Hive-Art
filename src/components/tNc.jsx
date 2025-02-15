@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-// Styled Components
 const TermsContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: #fff;
+  background: inherit;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
@@ -20,7 +19,7 @@ const TermsContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #2c3e50;
+  color: var(--primary);
   text-align: center;
   margin-bottom: 20px;
   font-family: "Phonk Contrast DEMO";
@@ -34,11 +33,9 @@ const Section = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 1.5rem;
-  color: #34495e;
   cursor: pointer;
   padding: 10px;
-  background: #ecf0f1;
+  background: var(--background);
   border-radius: 5px;
   margin-bottom: 10px;
   display: flex;
@@ -46,13 +43,12 @@ const SectionTitle = styled.h2`
   justify-content: space-between;
   transition: background 0.3s ease;
   font-size: 1.5rem;
-  color: #34495e;
+  color: var(--primary);
   margin-top: 20px;
-  margin-bottom: 10px;
   font-family: "BOLDE";
   letter-spacing: 1.5px;
   &:hover {
-    background: #d5dbdb;
+    background: var(--accent);
   }
 
   @media (max-width: 768px) {
@@ -69,7 +65,7 @@ const SectionContent = styled.div`
 
 const Paragraph = styled.p`
   font-size: 1rem;
-  color: #555;
+  color: var(--text);
   margin-bottom: 15px;
   font-size: 1rem;
   color: #555;
@@ -109,12 +105,8 @@ const ListItem = styled.li`
 `;
 
 const Subtitle = styled.h3`
-  font-size: 1.25rem;
-  color: #2c3e50;
-  margin-top: 15px;
-  margin-bottom: 10px;
   font-size: 1.5rem;
-  color: #34495e;
+  color: var(--primary);
   margin-top: 20px;
   margin-bottom: 10px;
   font-family: "BOLDE";
@@ -1226,16 +1218,8 @@ export function ConditionsTermsPage() {
               Terms & Conditions, Users may contact Maya Incorporation
               (operating as ArtiumHive) through the following official channels:
             </Paragraph>
-            {/* <ContactList> */}
-            {/* <ContactListItem> */}
-            <Paragraph></Paragraph>
-            📧 Email: contact@artiumhive.art
-            {/* </ContactListItem> */}
-            {/* <ContactListItem> */}
-            <Paragraph></Paragraph>
-            🌍 Website: https://artiumhive.art
-            {/* </ContactListItem> */}
-            {/* </ContactList> */}
+            <Paragraph>📧 Email: contact@artiumhive.art</Paragraph>
+            <Paragraph>🌍 Website: https://artiumhive.art</Paragraph>
             <Paragraph>
               Maya Incorporation (ArtiumHive) will only respond to inquiries
               submitted through official channels.

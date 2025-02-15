@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import { products, products_hinduism, products_nature } from "../Products"; // Adjust the import path as needed
@@ -165,6 +165,9 @@ const NavLink = styled.a`
     color: var(--accent);
     cursor: pointer;
   }
+  @media only screen and (min-width: 1115px) and (max-width: 2560px) {
+    font-size: 23px;
+  }
 `;
 const LandingHeader = styled.div`
   display: flex;
@@ -214,22 +217,122 @@ const SubHeading = styled.h2`
   }
 `;
 
-const MasonryGrid = ({ products }) => (
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const popUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
+const SkeletonImageCard = styled.div`
+  position: relative;
+  margin: 10px;
+  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  height: 200px; /* Adjust height as needed */
+  width: 100%; /* Ensure it takes up full width */
+  animation: shimmer 1.5s infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+`;
+
+const SkeletonPrice = styled.div`
+  margin-top: 10px;
+  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background-size: 200% 100%;
+  height: 20px; /* Adjust height as needed */
+  width: 100%; /* Adjust width as needed */
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+`;
+
+const AnimatedImage = styled.img`
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  opacity: 0;
+  animation: ${fadeIn} 0.5s ease forwards;
+`;
+
+const AnimatedPrice = styled.div`
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  font-family: "BOLDE";
+  font-size: 19px;
+  letter-spacing: 1.5px;
+  opacity: 0;
+  animation: ${popUp} 0.5s ease forwards;
+`;
+
+const SkeletonMasonryGrid = () => (
   <ResponsiveMasonry
     columnsCountBreakPoints={{ 440: 2, 800: 3, 1115: 5 }}
     gutterBreakpoints={{ 440: "0px", 800: "24px" }}
   >
-    <Masonry
-      columnsCountBreakPoints={{ 0: 2, 441: 3, 1115: 4 }} // Corrected breakpoints
-      gutter="10px"
-    >
-      {products.map((product) => (
+    <Masonry columnsCountBreakPoints={{ 0: 2, 441: 3, 1115: 4 }} gutter="10px">
+      {Array.from({ length: 6 }).map((_, index) => (
+        <div key={index} style={{ width: "100%", justifyItems: "center" }}>
+          <SkeletonImageCard />
+          <SkeletonPrice />
+        </div>
+      ))}
+    </Masonry>
+  </ResponsiveMasonry>
+);
+
+const MasonryGrid = ({ products, isLoading }) => (
+  <ResponsiveMasonry
+    columnsCountBreakPoints={{ 440: 2, 800: 3, 1115: 5 }}
+    gutterBreakpoints={{ 440: "0px", 800: "24px" }}
+  >
+    <Masonry columnsCountBreakPoints={{ 0: 2, 441: 3, 1115: 4 }} gutter="10px">
+      {products.map((product, index) => (
         <ImageCard key={product.id}>
-          <Image src={product.image} alt={product.name} loading="lazy" />
-          <Price>${product.price}</Price>
-          <Overlay aria-hidden="true">
-            <BuyNow>Buy Now</BuyNow>
-          </Overlay>
+          {!isLoading && (
+            <>
+              <AnimatedImage
+                src={product.image}
+                alt={product.name}
+                loading="lazy"
+                style={{ animationDelay: `${index * 0.1}s` }} // Sequential delay
+              />
+              <AnimatedPrice
+                style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
+              >
+                ${product.price}
+              </AnimatedPrice>
+              <Overlay aria-hidden="true">
+                <BuyNow>Buy Now</BuyNow>
+              </Overlay>
+            </>
+          )}
         </ImageCard>
       ))}
     </Masonry>
@@ -237,6 +340,21 @@ const MasonryGrid = ({ products }) => (
 );
 
 export function Container() {
+  const [isArtLoading, setIsArtLoading] = useState(true);
+  const [isHinduismLoading, setIsHinduismLoading] = useState(true);
+  const [isNatureLoading, setIsNatureLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsArtLoading(false);
+      setIsHinduismLoading(false);
+    }, 3000);
+
+    setTimeout(() => {
+      setIsNatureLoading(false);
+    }, 4000);
+  }, []);
+
   const scrollToCollection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
   };
@@ -260,13 +378,28 @@ export function Container() {
       </Navigation>
 
       <CollectionHeading id="art">Art</CollectionHeading>
-      <MasonryGrid products={products} />
+      {isArtLoading ? (
+        <SkeletonMasonryGrid />
+      ) : (
+        <MasonryGrid products={products} isLoading={isArtLoading} />
+      )}
 
       <CollectionHeading id="hinduism">Hinduism</CollectionHeading>
-      <MasonryGrid products={products_hinduism} />
+      {isHinduismLoading ? (
+        <SkeletonMasonryGrid />
+      ) : (
+        <MasonryGrid
+          products={products_hinduism}
+          isLoading={isHinduismLoading}
+        />
+      )}
 
       <CollectionHeading id="nature">Nature</CollectionHeading>
-      <MasonryGrid products={products_nature} />
+      {isNatureLoading ? (
+        <SkeletonMasonryGrid />
+      ) : (
+        <MasonryGrid products={products_nature} isLoading={isNatureLoading} />
+      )}
     </Container_div>
   );
 }

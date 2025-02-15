@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-// Styled Components
 const RefundPolicyContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: #fff;
+  background: inherit;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 151px;
@@ -14,7 +13,7 @@ const RefundPolicyContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #2c3e50;
+  color: var(--primary);
   text-align: center;
   margin-bottom: 20px;
   font-family: "Phonk Contrast DEMO";
@@ -22,7 +21,7 @@ const Title = styled.h1`
 
 const SectionTitle = styled.h2`
   font-size: 1.5rem;
-  color: #34495e;
+  color: var(--primary);
   margin-top: 20px;
   margin-bottom: 10px;
       font-family: 'BOLDE';
@@ -32,7 +31,7 @@ const SectionTitle = styled.h2`
 
 const Paragraph = styled.p`
   font-size: 1rem;
-  color: #555;
+  color: var(--text);
   margin-bottom: 15px;
   line-height: 1.6;
   font-family: "Tanseek Modern Pro Arabic Book";
@@ -40,17 +39,6 @@ const Paragraph = styled.p`
   letter-spacing: 1.5px;
 `;
 
-const List = styled.ul`
-  margin-left: 20px;
-  margin-bottom: 15px;
-`;
-
-const ListItem = styled.li`
-  margin-bottom: 8px;
-  font-family: "Tanseek Modern Pro Arabic Book";
-  font-size: 20px;
-  letter-spacing: 1.5px;
-`;
 export function RefundPolicy() {
   return (
     <RefundPolicyContainer>

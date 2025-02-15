@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-// Styled Components
 const ContactPageContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  background: #f9f9f9;
+  background: inherit;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-top: 155px;
@@ -56,10 +55,11 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: #fff;
+  background: inherit;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  ba
 `;
 
 const Input = styled.input`
@@ -119,7 +119,7 @@ const SubmitButton = styled.button`
 `;
 
 const ContactInfo = styled.div`
-  background: #fff;
+  background: inherit;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -162,17 +162,6 @@ const InfoText = styled.p`
   font-weight: 600;
 `;
 
-const MapContainer = styled.div`
-  iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-`;
-
-// ContactUs Component
 const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
