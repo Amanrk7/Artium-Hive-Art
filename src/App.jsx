@@ -1,11 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { Provider } from "react-redux";
 import { Container } from "./components/Container";
-// import { ArtDetails } from "./components/ArtDetails";
-// import "./fanta.css";
 import { PageNavigation } from "./components/pageNavigation";
-// import { BuyPage } from "./components/buy";
 import { SellPage } from "./components/sell";
 import { SupportPage } from "./components/support";
 import { AboutPage } from "./components/about";
@@ -14,16 +10,51 @@ import SignIn from "./components/signIn";
 import Profile from "./components/profile";
 import { auth } from "./firebase/firebase";
 import "./css/fanta.css";
-// import LoginForm from "./components/LoginForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./GlobalContext/AuthContext";
 import { PrivacyPolicy } from "./components/privacyPolicy";
 import { RefundPolicy } from "./components/refundPolicy";
 import ContactUs from "./components/contactUs";
 import { ConditionsTermsPage } from "./components/tNc";
+
+const AppContent = ({ user }) => (
+  <>
+    <PageNavigation />
+    <div id="appHeaderBack">
+      <Routes>
+        <Route path="/" element={<Container />} />
+        <Route
+          path="/sell"
+          element={
+            <ProtectedRoute>
+              <SellPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/buy" element={<Container />} />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile user={user} />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="/logIn" element={<SignIn />} />
+        <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/refundPolicy" element={<RefundPolicy />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/termsAndCondition" element={<ConditionsTermsPage />} />
+      </Routes>
+    </div>
+    <Footer />
+  </>
+);
+
 const App = () => {
-  const [user, setUser] = useState(true);
-  // console.log("Environment Variables:", import.meta.env);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
@@ -33,57 +64,12 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
-  // const handleSignIn = (signedInUser) => {
-  //   setUser(signedInUser);
-  // };
-
-  const AppContent = () => (
-    <>
-      <PageNavigation />
-
-      <div id="appHeaderBack">
-        <Routes>
-          <Route path="/" element={<Container />} />
-          <Route
-            path="/sell"
-            element={
-              <ProtectedRoute>
-                <SellPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/buy" element={<Container />} />
-          <Route
-            path="/profile"
-            element={
-              <ProtectedRoute>
-                <Profile user={user} />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/support" element={<SupportPage />} />
-          <Route path="/logIn" element={<SignIn />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/refundPolicy" element={<RefundPolicy />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/termsAndCondition" element={<ConditionsTermsPage />} />
-
-          {/* <Route path="/art/:slug" element={<ArtDetails />} />
-          <Route path="/userLogin" element={<SignIn />} />*/}
-        </Routes>
-      </div>
-      <Footer />
-    </>
-  );
-
   return (
-    <>
-      <AuthProvider>
-        {/* <Router>{!showSignInForm ? <AppContent /> : <SignIn />}</Router> */}
-        <Router>{<AppContent />}</Router>
-      </AuthProvider>
-    </>
+    <AuthProvider>
+      <Router>
+        <AppContent user={user} />
+      </Router>
+    </AuthProvider>
   );
 };
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
 import { products, products_hinduism, products_nature } from "../Products"; // Adjust the import path as needed
 
 const Container_div = styled.div`
@@ -169,6 +170,7 @@ const NavLink = styled.a`
     font-size: 23px;
   }
 `;
+
 const LandingHeader = styled.div`
   display: flex;
   flex-direction: column;
@@ -216,7 +218,6 @@ const SubHeading = styled.h2`
     font-size: 1.5rem;
   }
 `;
-
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -240,7 +241,8 @@ const popUp = keyframes`
 const SkeletonImageCard = styled.div`
   position: relative;
   margin: 10px;
-  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  // background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
   background-size: 200% 100%;
   border-radius: 8px;
   height: 200px; /* Adjust height as needed */
@@ -259,7 +261,8 @@ const SkeletonImageCard = styled.div`
 
 const SkeletonPrice = styled.div`
   margin-top: 10px;
-  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  // background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
   background-size: 200% 100%;
   height: 20px; /* Adjust height as needed */
   width: 100%; /* Adjust width as needed */
@@ -289,6 +292,39 @@ const AnimatedPrice = styled.div`
   letter-spacing: 1.5px;
   opacity: 0;
   animation: ${popUp} 0.5s ease forwards;
+`;
+const ExploreButton = styled.button`
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-family: "Phonk Contrast DEMO", sans-serif;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`;
+
+const GlobeIcon = styled.span`
+  background: linear-gradient(45deg, #3a7d44, #0077b6, #90e0ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-right: 8px;
+  font-size: 1.2rem;
 `;
 
 const SkeletonMasonryGrid = () => (
@@ -367,6 +403,12 @@ export function Container() {
         <MainHeading>DIGITAL ARTS</MainHeading>
         <SubHeading>AT YOUR OWN</SubHeading>
         <MainHeading>PRICE</MainHeading>
+        <ExploreButton onClick={() => scrollToCollection("art")}>
+          <GlobeIcon>
+            <FontAwesomeIcon style={{background: "none"}} icon={faEarthAmericas} spin />
+          </GlobeIcon>
+          Explore
+        </ExploreButton>
       </LandingHeader>
 
       <Navigation>
