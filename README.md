@@ -1,21 +1,31 @@
-# Artium Hive
- 
-## Our Motto
-### Where Art Sparks Connections
-### passion meets pixels & creativity finds direction
-### a hive of dreams, a shared collection
-### Discover Create Inspire
+# Artium Hive - Digital Art Marketplace
 
-## What We Believe
-At ArtiumHive, we believe that art is a universal language that
-            transcends boundaries and connects souls. Our mission is to create a
-            vibrant platform where passion meets pixels, and creativity finds
-            its true direction. We are dedicated to supporting local artists
-            from around the world, providing them with a space to showcase their
-            talents and share their unique stories. By bringing together
-            creators and appreciators in one inclusive community, we aim to make
-            art accessible to all and inspire connections that celebrate the
-            beauty of human expression. Join us in this journey to discover,
-            create, and inspire. Together, let's build a hive of dreams and a
-            shared collection that resonates with art lovers everywhere".
-          
+## 🌐 [Live Demo](your-live-link)
+
+## 📸 Screenshots
+[Add screenshots here]
+
+## ✨ Features
+- User authentication with Firebase
+- Responsive masonry grid layout
+- Lazy loading for optimized performance
+- Smooth animations with Framer Motion
+- Search and filter functionality
+
+## 🛠️ Built With
+- React.js
+- Styled Components
+- Firebase
+- React Router
+- Context API
+
+## 🚀 Getting Started
+```bash
+git clone https://github.com/Amanrk7/artium-hive
+cd artium-hive
+npm install
+npm start
+```
+
+## 📧 Contact
+Aman RK - amanrk00112@gmail.com
