@@ -1,6 +1,6 @@
 # Artium Hive - Digital Art Marketplace
 
-## 🌐 [Live Demo]([your-live-link](https://artiumhive.art/))
+## 🌐 [Live Demo](https://artiumhive.art/)
 
 ## 📸 Screenshots
 <img width="1856" height="918" alt="ArtiumHive" src="https://github.com/user-attachments/assets/40f235ec-8413-4b07-9381-d24109d1be27" />
